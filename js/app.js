@@ -12,7 +12,7 @@ var {
   TabBarIOS,
   StyleSheet,
   View,
-  Text,
+  Text
 } = React;
 
 // This is needed because the actual image may not exist as a file and

@@ -2,6 +2,9 @@
 
 var React = require('react-native');
 var SessionStore = require('../stores/sessionStore');
+var moment = require('moment');
+var Session = require('./session');
+//var Router = require('react-native-router');
 
 var {
   StyleSheet,
@@ -9,13 +12,20 @@ var {
   ListView,
   View,
   Component,
+  TouchableHighlight,
+  Image,
+  Session,
+  NavigatorIOS
 } = React; 
 
 var Sessions = React.createClass({
   getInitialState: function () {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    SessionStore.getAll();
+
     return {
-      dataSource: ds.cloneWithRows(SessionStore.getAll()),
+      sessions: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2,
+      })
     };
   },
 
@@ -28,37 +38,47 @@ var Sessions = React.createClass({
   },
 
   sessionsChanged: function() {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    this.setState({ dataSource: ds.cloneWithRows(SessionStore.getAll()) });
+    var sessions = SessionStore.getAll();
+    this.setState({ sessions: this.state.sessions.cloneWithRows(sessions) });
+  },
+
+  openSession: function(session) {
+    console.log('Opening session', session);
+    /*this.props.navigator.push({
+      name: 'Session',
+      component: Session,
+      data: session
+    });*/
   },
 
   renderRow: function (rowData) {
+    var date = moment(rowData.date);
     return(
-        <View>
-          <Text>rowData</Text>
-        </View>
-      /*<TouchableHighlight onPress={() => this.rowPressed(rowData.guid)}
-          underlayColor='#dddddd'>
-        <View>
-          <View style={styles.rowContainer}>
-            <Image style={styles.thumb} source={{ uri: rowData.img_url }} />
-            <View  style={styles.textContainer}>
-              <Text style={styles.price}>£{price}</Text>
-              <Text style={styles.title} 
-                    numberOfLines={1}>{rowData.title}</Text>
-            </View>
+      <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
+        <View style={styles.listRow}>
+          <Image style={styles.thumb} source={{ uri: (rowData.instrument && rowData.instrument.imageFile) ? 'http://localhost/api/images/' + rowData.instrument.imageFile + '.jpg' : null }} />
+          <View>
+            <Text style={styles.title}>{date.format('L')}: {rowData.length} minutes</Text>
+            <Text>{rowData.goal.title} ({rowData.location})</Text>
           </View>
           <View style={styles.separator}/>
         </View>
-      </TouchableHighlight>*/
+        <NavigatorIOS
+          style={styles.container}
+          initialRoute={{
+            title: 'Session',
+            component: Session,
+            rightButtonTitle: 'Edit'
+          }}/>
+      </TouchableHighlight>
     );
   },
 
   render: function () {
     return (
       <ListView
-        dataSource={this.state.dataSource}
-        renderRow={(rowData) => <View style={styles.listRow}><Text>{rowData}</Text></View>}
+        dataSource={this.state.sessions}
+        renderRow={this.renderRow}
       />
     );
   },
@@ -66,8 +86,24 @@ var Sessions = React.createClass({
 
 var styles = StyleSheet.create({
   listRow: {
-    height: 40
-  }
+    flex: 1,
+    height: 50,
+    flexDirection: 'row',
+    margin: 2,
+    borderBottomColor: '#eeeeee',
+    borderBottomWidth: 1
+  },
+  separator: {
+    backgroundColor: 'black'
+  },
+  thumb: {
+    width: 50,
+    height: 50,
+    marginRight: 5
+  },
+  title: {
+    fontWeight: 'bold'
+  },
 });
 
 

@@ -6,10 +6,7 @@ var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign')
 var CHANGE_EVENT = 'sessions.change';
 
-var sessions = [{
-  id: 123,
-  name: 'First session'
-}];
+var sessions = null;
 
 function addSession (session) {
   sessions.push(session);
@@ -21,7 +18,24 @@ var SessionStore = assign({}, EventEmitter.prototype, {
   },
 
   getAll: function () {
-      return sessions
+    if (!sessions) {
+      this.getFromApi();
+    }
+
+    return sessions;
+  },
+
+  getFromApi: function() {
+    var store = this;
+
+    fetch('http://localhost/api/sessions', { method: 'GET' })
+      .then(function(res) {
+        return res.json();
+      })
+      .then(function(resJson) {
+        sessions = resJson;
+        store.emitChange();
+      });  
   },
 
   addChangeListener: function (callback) {
