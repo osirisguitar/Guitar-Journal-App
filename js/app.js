@@ -4,6 +4,7 @@ var React = require('react-native');
 var Home = require('./components/home');
 var Sessions = require('./components/sessions');
 var Session = require('./components/session');
+var Settings = require('./components/settings');
 var actions = require('./actions/actions');
 
 var {
@@ -35,8 +36,8 @@ var App = React.createClass({
 
   render() {
     return (
-      <TabBarIOS>
-        <TabBarIOS.Item title="Home" icon={_ix_DEPRECATED('history')} 
+      <TabBarIOS style={styles.container}>
+        <TabBarIOS.Item title="Home" 
           selected={this.state.selectedTab === 'home'}
           onPress={() => {
             this.setState({
@@ -51,9 +52,8 @@ var App = React.createClass({
               component: Home
             }}/>
         </TabBarIOS.Item>
-        <TabBarIOS.Item title="Home" icon={_ix_DEPRECATED('favorites')}
+        <TabBarIOS.Item title="Sessions"
           selected={this.state.selectedTab === 'sessions'}
-          badge={3}
           onPress={() => {
             this.setState({
               selectedTab: 'sessions',
@@ -67,6 +67,21 @@ var App = React.createClass({
               component: Sessions,
               rightButtonTitle: 'New',
               onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session })
+            }}/>
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title="Settings"
+          selected={this.state.selectedTab === 'settings'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'settings',
+            });
+          }}>
+          <NavigatorIOS
+            style={styles.container}
+            ref='sessionNav'
+            initialRoute={{
+              title: 'Settings',
+              component: Settings
             }}/>
         </TabBarIOS.Item>
       </TabBarIOS>

@@ -30,7 +30,7 @@ var SessionStore = assign({}, EventEmitter.prototype, {
   getFromApi: function() {
     var store = this;
 
-    fetch('http://localhost/api/sessions', { method: 'GET' })
+    fetch('http://192.168.110.187/api/sessions', { method: 'GET' })
       .then(function (res) {
         return res.json();
       })
@@ -43,7 +43,7 @@ var SessionStore = assign({}, EventEmitter.prototype, {
   loadMoreSessions: function() {
     var store = this;
 
-    fetch('http://localhost/api/sessions/' + currentLimit, { method: 'GET' })
+    fetch('http://192.168.110.187/api/sessions/' + currentLimit, { method: 'GET' })
       .then(function (res) {
         return res.json();
       })

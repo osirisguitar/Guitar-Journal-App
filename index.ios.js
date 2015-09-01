@@ -12,7 +12,8 @@ var {
   StyleSheet,
   Text,
   View,
-  Navigator
+  Navigator,
+  NavigatorIOS
 } = React;
 
 var GuitarJournalApp = React.createClass({
@@ -30,6 +31,10 @@ var GuitarJournalApp = React.createClass({
       <Navigator
         initialRoute={{name: 'Login', index: 0}}
         renderScene={this.renderNavigatorScenes}      
+        configureScene={() => ({
+          ...Navigator.SceneConfigs.FloatFromBottom,
+          gestures: {}, // or null
+        })}
       />
     );
   }
@@ -37,10 +42,7 @@ var GuitarJournalApp = React.createClass({
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flex: 1
   },
   welcome: {
     fontSize: 20,

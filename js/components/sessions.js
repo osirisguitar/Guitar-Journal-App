@@ -54,7 +54,7 @@ var Sessions = React.createClass({
     return(
       <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
-          <Image style={styles.thumb} source={{ uri: (rowData.instrument && rowData.instrument.imageFile) ? 'http://localhost/api/images/' + rowData.instrument.imageFile + '.jpg' : null }} />
+          <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} />
           <View>
             <Text style={styles.title}>{date.format('L')}: {rowData.length} minutes</Text>
             <Text>{rowData.goal.title} ({rowData.location})</Text>
