@@ -15,50 +15,34 @@ var {
 } = React; 
 
 var Session = React.createClass({
-  getInitialState: function () {
-  },
-
-  componentDidMount: function() {
-  },
-
-  componentWillUnmount: function() {
-  },
-
-  openSession: function(session) {
-  },
-
-  sessionsChanged: function() {
-  },
-
   render: function () {
     return (
-      <View>
-        <Text>Hej</Text>
+      <View style={styles.container}>
+        <View>
+          <Text>{this.props.session.date}</Text>
+        </View>
+        <View>
+          <Text>{this.props.session.length}</Text>
+        </View>
+        <View>
+          <Text>{this.props.session.instrument.name}</Text>
+        </View>
+        <View>
+          <Text>{this.props.session.goal.title}</Text>
+        </View>
+        <View>
+          <Text>{this.props.session.rating}</Text>
+        </View>
       </View>
     );
   },
 });
 
 var styles = StyleSheet.create({
-  listRow: {
+  container: {
     flex: 1,
-    height: 50,
-    flexDirection: 'row',
-    margin: 2,
-    borderBottomColor: '#eeeeee',
-    borderBottomWidth: 1
-  },
-  separator: {
-    backgroundColor: 'black'
-  },
-  thumb: {
-    width: 50,
-    height: 50,
-    marginRight: 5
-  },
-  title: {
-    fontWeight: 'bold'
-  },
+    marginTop: 70
+  }
 });
 
 

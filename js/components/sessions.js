@@ -14,8 +14,7 @@ var {
   Component,
   TouchableHighlight,
   Image,
-  Session,
-  NavigatorIOS
+  Navigator
 } = React; 
 
 var Sessions = React.createClass({
@@ -43,12 +42,11 @@ var Sessions = React.createClass({
   },
 
   openSession: function(session) {
-    console.log('Opening session', session);
-    /*this.props.navigator.push({
-      name: 'Session',
-      component: Session,
-      data: session
-    });*/
+    this.props.navigator.push({ title: 'Session', component: Session, passProps: { session: session } });
+  },
+
+  loadMoreSessions: function() {
+    SessionStore.loadMoreSessions();
   },
 
   renderRow: function (rowData) {
@@ -63,13 +61,6 @@ var Sessions = React.createClass({
           </View>
           <View style={styles.separator}/>
         </View>
-        <NavigatorIOS
-          style={styles.container}
-          initialRoute={{
-            title: 'Session',
-            component: Session,
-            rightButtonTitle: 'Edit'
-          }}/>
       </TouchableHighlight>
     );
   },
@@ -79,6 +70,7 @@ var Sessions = React.createClass({
       <ListView
         dataSource={this.state.sessions}
         renderRow={this.renderRow}
+        onEndReached={this.loadMoreSessions}
       />
     );
   },

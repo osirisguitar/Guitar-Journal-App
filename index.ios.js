@@ -5,28 +5,32 @@
 'use strict';
 
 var React = require('react-native');
+var Login = require('./js/components/login');
+var App = require('./js/app');
 var {
   AppRegistry,
   StyleSheet,
   Text,
   View,
+  Navigator
 } = React;
 
 var GuitarJournalApp = React.createClass({
+  renderNavigatorScenes: function (route, navigator) {
+    switch (route.name) {
+      case 'Login':
+        return <Login navigator={navigator} />
+      case 'App':
+        return <App navigator={navigator} />
+    } 
+  },
+
   render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Navigator
+        initialRoute={{name: 'Login', index: 0}}
+        renderScene={this.renderNavigatorScenes}      
+      />
     );
   }
 });

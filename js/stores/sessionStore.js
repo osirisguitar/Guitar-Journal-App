@@ -7,6 +7,8 @@ var assign = require('object-assign')
 var CHANGE_EVENT = 'sessions.change';
 
 var sessions = null;
+var chunkSize = 20;
+var currentLimit = 20;
 
 function addSession (session) {
   sessions.push(session);
@@ -29,13 +31,27 @@ var SessionStore = assign({}, EventEmitter.prototype, {
     var store = this;
 
     fetch('http://localhost/api/sessions', { method: 'GET' })
-      .then(function(res) {
+      .then(function (res) {
         return res.json();
       })
-      .then(function(resJson) {
+      .then(function (resJson) {
         sessions = resJson;
         store.emitChange();
       });  
+  },
+
+  loadMoreSessions: function() {
+    var store = this;
+
+    fetch('http://localhost/api/sessions/' + currentLimit, { method: 'GET' })
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (resJson) {
+        sessions = sessions.concat(resJson);
+        currentLimit += chunkSize;
+        store.emitChange();
+      });
   },
 
   addChangeListener: function (callback) {

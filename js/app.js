@@ -3,6 +3,7 @@
 var React = require('react-native');
 var Home = require('./components/home');
 var Sessions = require('./components/sessions');
+var Session = require('./components/session');
 var actions = require('./actions/actions');
 
 var {
@@ -25,7 +26,7 @@ function _ix_DEPRECATED(imageUri) {
   };
 }
 
-var GuitarJournalApp = React.createClass({
+var App = React.createClass({
   getInitialState() {
     return {
       selectedTab: 'home'
@@ -43,6 +44,7 @@ var GuitarJournalApp = React.createClass({
             });
           }}>
           <NavigatorIOS
+            ref = 'homeNav'
             style={styles.container}
             initialRoute={{
               title: 'OSIRIS GUITAR Journal',
@@ -59,11 +61,12 @@ var GuitarJournalApp = React.createClass({
           }}>
           <NavigatorIOS
             style={styles.container}
+            ref='sessionNav'
             initialRoute={{
               title: 'Sessions',
               component: Sessions,
               rightButtonTitle: 'New',
-              onRightButtonPress: () => actions.addSession({ id: 333, name: 'Added session' })
+              onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session })
             }}/>
         </TabBarIOS.Item>
       </TabBarIOS>
@@ -77,4 +80,5 @@ var styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('GuitarJournalApp', () => GuitarJournalApp);
+module.exports = App;
+//AppRegistry.registerComponent('GuitarJournalApp', () => GuitarJournalApp);
