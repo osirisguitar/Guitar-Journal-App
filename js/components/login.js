@@ -3,18 +3,18 @@
 var React = require('react-native');
 var App = require('../app');
 var Button = require('react-native-button');
+var Display = require('react-native-device-display');
 
 var {
   StyleSheet,
   Text,
   View,
   TextInput,
+  Image,
   Component,
   SwitchIOS,
   GlobalStore
 } = React; 
-
-
 
 var Login = React.createClass({
   goToHome: function() {
@@ -25,29 +25,32 @@ var Login = React.createClass({
   },
 
   render() {
+    console.log('Render', styles.image);
     return (
-      <View style={styles.container}>
-        <TextInput
-          placeholder = {'Email'}
-          multiline = {false}
-          style={styles.inputField}
-          keyboardType={'email-address'}
-          clearButtonMode={'while-editing'}
-          defaultValue={'anders@bornholm.se'}
-          onChangeText={(text) => this.setState({email: text})}
-        />
-        <TextInput
-          multiline = {false}
-          placeholder = {'Password'}
-          secureTextEntry = {true}
-          clearButtonMode={'while-editing'}
-          style={styles.inputField}
-          onChangeText={(text) => this.setState({password: text})}
-        />
-        <Button onPress={this.goToHome}>
-          Log in
-        </Button>
-      </View>
+      <Image style={styles.image} source={require('image!login')}>
+        <View style={styles.container}>
+          <TextInput
+            placeholder = {'Email'}
+            multiline = {false}
+            style={styles.inputField}
+            keyboardType={'email-address'}
+            clearButtonMode={'while-editing'}
+            defaultValue={'anders@bornholm.se'}
+            onChangeText={(text) => this.setState({email: text})}
+          />
+          <TextInput
+            multiline = {false}
+            placeholder = {'Password'}
+            secureTextEntry = {true}
+            clearButtonMode={'while-editing'}
+            style={styles.inputField}
+            onChangeText={(text) => this.setState({password: text})}
+          />
+          <Button onPress={this.goToHome}>
+            Log in
+          </Button>
+        </View>
+      </Image>
     );
   }
 });
@@ -62,7 +65,15 @@ var styles = StyleSheet.create({
   inputField: {
     height: 40,
     paddingLeft: 5,
-    borderWidth: 1
+    marginBottom: 10,
+    backgroundColor: 'white',
+    opacity: 0.8
+  },
+  image: {
+    width: Display.width,
+    height: Display.height,
+    flex: 1,
+    resizeMode: 'cover'
   }
 }); 
 

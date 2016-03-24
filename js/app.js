@@ -96,4 +96,3 @@ var styles = StyleSheet.create({
 });
 
 module.exports = App;
-//AppRegistry.registerComponent('GuitarJournalApp', () => GuitarJournalApp);

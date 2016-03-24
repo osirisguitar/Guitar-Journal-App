@@ -42,7 +42,13 @@ var Sessions = React.createClass({
   },
 
   openSession: function(session) {
-    this.props.navigator.push({ title: 'Session', component: Session, passProps: { session: session } });
+    this.props.navigator.push({ 
+      title: 'Session', 
+      component: Session, 
+      passProps: { session: session }, 
+      rightButtonTitle: 'Edit', 
+      onRightButtonPress: () => {}
+    });
   },
 
   loadMoreSessions: function() {

@@ -30,7 +30,7 @@ var SessionStore = assign({}, EventEmitter.prototype, {
   getFromApi: function() {
     var store = this;
 
-    fetch('http://192.168.110.187/api/sessions', { method: 'GET' })
+    fetch('http://localhost/api/sessions', { method: 'GET' })
       .then(function (res) {
         return res.json();
       })
