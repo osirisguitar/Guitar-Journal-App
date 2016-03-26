@@ -4,29 +4,33 @@
  */
 'use strict';
 
-var React = require('react-native');
-var Login = require('./js/components/login');
-var App = require('./js/app');
-var {
+import App from './js/app';
+import Login from './js/components/login';
+import React, {
   AppRegistry,
+  Component,
   StyleSheet,
   Text,
   View,
   Navigator,
   NavigatorIOS
-} = React;
+} from 'react-native';
 
-var GuitarJournalApp = React.createClass({
-  renderNavigatorScenes: function (route, navigator) {
+class GuitarJournalApp extends Component {
+  constructor (props) {
+    super(props);
+  }
+
+  renderNavigatorScenes (route, navigator) {
     switch (route.name) {
       case 'Login':
         return <Login navigator={navigator} />
       case 'App':
         return <App navigator={navigator} />
     } 
-  },
+  }
 
-  render: function() {
+  render () {
     return (
       <Navigator
         initialRoute={{name: 'Login', index: 0}}
@@ -38,7 +42,7 @@ var GuitarJournalApp = React.createClass({
       />
     );
   }
-});
+};
 
 var styles = StyleSheet.create({
   container: {

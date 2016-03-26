@@ -3,7 +3,7 @@
 var React = require('react-native');
 var App = require('../app');
 var Button = require('react-native-button');
-var Display = require('react-native-device-display');
+//var Display = require('react-native-device-display');
 
 var {
   StyleSheet,
@@ -70,8 +70,8 @@ var styles = StyleSheet.create({
     opacity: 0.8
   },
   image: {
-    width: Display.width,
-    height: Display.height,
+    width: 480, //Display.width,
+    height: 520, // Display.height,
     flex: 1,
     resizeMode: 'cover'
   }

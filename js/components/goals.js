@@ -1,8 +1,8 @@
 'use strict';
 
-import SessionStore from '../stores/sessionStore';
+import GoalStore from '../stores/goalStore';
 import moment from 'moment';
-import Session from './session';
+import Goal from './goal';
 
 import React, {
   StyleSheet,
@@ -11,61 +11,57 @@ import React, {
   View,
   Component,
   TouchableHighlight,
-  Image
-} from 'react-native';
+  Image,
+  Navigator
+} from 'react-native'; 
 
-class Sessions extends Component {
+class Goals extends Component {
   constructor (props) {
     super(props);
 
-    SessionStore.getAll();
-
-    this.renderRow = this.renderRow.bind(this);
-    this.openSession = this.openSession.bind(this);
-    this.sessionsChanged = this.sessionsChanged.bind(this);
+    GoalStore.getAll();
 
     this.state = {
       sessions: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2
+        rowHasChanged: (row1, row2) => row1 !== row2,
       })
     };
   }
 
   componentDidMount () {
-    // Dumb closure needed because of scope set by event callback
-    SessionStore.addChangeListener(this.sessionsChanged);
+    GoalStore.addChangeListener(this.goalsChanged);
   }
 
   componentWillUnmount () {
-    SessionStore.removeChangeListener(this.sessionsChanged);
+    GoalStore.removeChangeListener(this.goalsChanged);
   }
 
-  sessionsChanged () {
-    let loadedSessions = SessionStore.getAll();
-    this.setState({ sessions: this.state.sessions.cloneWithRows(loadedSessions) });
+  goalsChanged () {
+    var goals = GoalsStore.getAll();
+    this.setState({ goals: this.state.goals.cloneWithRows(goals) });
   }
 
-  openSession (session) {
-    this.props.navigator.push({
-      title: 'Session',
-      component: Session,
-      passProps: { session: session },
-      rightButtonTitle: 'Edit',
+  openGoal (goals) {
+    this.props.navigator.push({ 
+      title: 'Goal', 
+      component: Goal, 
+      passProps: { goal: goal }, 
+      rightButtonTitle: 'Edit', 
       onRightButtonPress: () => this.props.navigator.push({
-        title: 'Edit Session',
-        component: Session,
-        passProps: { session: session }
+        title: 'Edit Goal', 
+        component: Goal, 
+        passProps: { goal: goal }      
       })
     });
   }
 
-  loadMoreSessions () {
-    SessionStore.loadMoreFromApi();
+  loadMoreGoals () {
+    GoalStore.loadMoreGoals();
   }
 
   renderRow (rowData) {
     var date = moment(rowData.date);
-    return (
+    return(
       <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
           <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} />
@@ -109,7 +105,8 @@ var styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold'
-  }
+  },
 });
+
 
 module.exports = Sessions;
