@@ -4,27 +4,22 @@ import React, {
   StyleSheet,
   Text,
   View,
-  Image,
   Component
 } from 'react-native';
 
-class Session extends Component {
+class Goal extends Component {
   constructor (props) {
     super(props);
     this.render = this.render.bind(this);
   }
 
   render () {
-    if (this.props.session) {
+    console.log('Rendering goal');
+    if (this.props.goal) {
       return (
         <View style={styles.container}>
-          <Image style={styles.image} source={{ uri: this.props.session.instrument ? this.props.session.instrument.imageUrl : null }} />
           <View>
-            <Text>{this.props.session.date}</Text>
-            <Text>{this.props.session.length}</Text>
-            <Text>{this.props.session.instrument.name}</Text>
-            <Text>{this.props.session.goal.title}</Text>
-            <Text>{this.props.session.rating}</Text>
+            <Text>{this.props.goal.title}</Text>
           </View>
         </View>
       );
@@ -36,7 +31,7 @@ class Session extends Component {
   }
 }
 
-var styles = StyleSheet.create({
+let styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 70,
@@ -50,4 +45,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = Session;
+module.exports = Goal;

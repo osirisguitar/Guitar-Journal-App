@@ -3,8 +3,9 @@
 import Home from './components/home';
 import Sessions from './components/sessions';
 import Session from './components/session';
-import Settings from './components/settings';
-import actions from './actions/actions';
+import Goals from './components/goals';
+import Goal from './components/goal';
+import Profile from './components/profile';
 
 //import Icon from 'react-native-vector-icons/Ionicons';
 //const Icon = require('react-native-vector-icons/Ionicons');
@@ -72,24 +73,24 @@ class App extends Component {
             ref='goalNav'
             initialRoute={{
               title: 'Goals',
-              component: Settings,
+              component: Goals,
               rightButtonTitle: 'New',
               onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add goal', component: Goal })
             }}/>
         </TabBarIOS.Item>
-        <TabBarIOS.Item title="Settings"
-          selected={this.state.selectedTab === 'settings'}
+        <TabBarIOS.Item title='Profile'
+          selected={this.state.selectedTab === 'profile'}
           onPress={() => {
             this.setState({
-              selectedTab: 'settings',
+              selectedTab: 'profile'
             });
           }}>
           <NavigatorIOS
             style={styles.container}
-            ref='sessionNav'
+            ref='profileNav'
             initialRoute={{
-              title: 'Settings',
-              component: Settings
+              title: 'Profile',
+              component: Profile
             }}/>
         </TabBarIOS.Item>
       </TabBarIOS>

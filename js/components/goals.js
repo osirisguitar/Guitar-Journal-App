@@ -1,7 +1,6 @@
 'use strict';
 
 import GoalStore from '../stores/goalStore';
-import moment from 'moment';
 import Goal from './goal';
 
 import React, {
@@ -11,9 +10,8 @@ import React, {
   View,
   Component,
   TouchableHighlight,
-  Image,
-  Navigator
-} from 'react-native'; 
+  SegmentedControlIOS
+} from 'react-native';
 
 class Goals extends Component {
   constructor (props) {
@@ -21,14 +19,19 @@ class Goals extends Component {
 
     GoalStore.getAll();
 
+    this.renderRow = this.renderRow.bind(this);
+    this.openGoal = this.openGoal.bind(this);
+    this.goalsChanged = this.goalsChanged.bind(this);
+
     this.state = {
-      sessions: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2,
+      goals: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2
       })
     };
   }
 
   componentDidMount () {
+    // Dumb closure needed because of scope set by event callback
     GoalStore.addChangeListener(this.goalsChanged);
   }
 
@@ -37,37 +40,34 @@ class Goals extends Component {
   }
 
   goalsChanged () {
-    var goals = GoalsStore.getAll();
-    this.setState({ goals: this.state.goals.cloneWithRows(goals) });
+    let loadedGoals = GoalStore.getAll();
+    this.setState({ goals: this.state.goals.cloneWithRows(loadedGoals) });
   }
 
-  openGoal (goals) {
-    this.props.navigator.push({ 
-      title: 'Goal', 
-      component: Goal, 
-      passProps: { goal: goal }, 
-      rightButtonTitle: 'Edit', 
+  openGoal (goal) {
+    this.props.navigator.push({
+      title: 'Goal',
+      component: Goal,
+      passProps: { goal: goal },
+      rightButtonTitle: 'Edit',
       onRightButtonPress: () => this.props.navigator.push({
-        title: 'Edit Goal', 
-        component: Goal, 
-        passProps: { goal: goal }      
+        title: 'Edit Goal',
+        component: Goal,
+        passProps: { goal: goal }
       })
     });
   }
 
   loadMoreGoals () {
-    GoalStore.loadMoreGoals();
+    GoalStore.loadMoreFromApi();
   }
 
   renderRow (rowData) {
-    var date = moment(rowData.date);
-    return(
-      <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
+    return (
+      <TouchableHighlight onPress={() => this.openGoal(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
-          <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} />
           <View>
-            <Text style={styles.title}>{date.format('L')}: {rowData.length} minutes</Text>
-            <Text>{rowData.goal.title} ({rowData.location})</Text>
+            <Text style={styles.title}>({rowData.title})</Text>
           </View>
           <View style={styles.separator}/>
         </View>
@@ -77,16 +77,23 @@ class Goals extends Component {
 
   render () {
     return (
-      <ListView
-        dataSource={this.state.sessions}
-        renderRow={this.renderRow}
-        onEndReached={this.loadMoreSessions}
-      />
+      <View style={styles.container}>
+        <SegmentedControlIOS values={['Active', 'Completed']} />
+        <ListView
+          dataSource={this.state.goals}
+          renderRow={this.renderRow}
+          onEndReached={this.loadMoreGoals}
+        />
+      </View>
     );
   }
-};
+}
 
-var styles = StyleSheet.create({
+let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 64
+  },
   listRow: {
     flex: 1,
     height: 50,
@@ -105,8 +112,7 @@ var styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold'
-  },
+  }
 });
 
-
-module.exports = Sessions;
+module.exports = Goals;

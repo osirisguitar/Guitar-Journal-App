@@ -88,9 +88,9 @@ class Sessions extends Component {
       />
     );
   }
-};
+}
 
-var styles = StyleSheet.create({
+let styles = StyleSheet.create({
   listRow: {
     flex: 1,
     height: 50,

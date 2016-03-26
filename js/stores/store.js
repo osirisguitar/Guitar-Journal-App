@@ -38,7 +38,7 @@ class Store {
   }
 
   getFromApi () {
-    var store = this;
+    let store = this;
 
     fetch(apiBaseUrl + this.apiRoute, { method: 'GET' })
       .then(function (res) {
@@ -54,7 +54,7 @@ class Store {
   }
 
   loadMoreFromApi () {
-    var store = this;
+    let store = this;
 
     fetch(apiBaseUrl + this.apiRoute + '/_skip=' + this.currentLimit + '&_limit=' + this.limit, { method: 'GET' })
       .then(function (res) {
