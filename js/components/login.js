@@ -1,31 +1,33 @@
 'use strict';
 
-var React = require('react-native');
-var App = require('../app');
-var Button = require('react-native-button');
-//var Display = require('react-native-device-display');
+import App from '../app';
+import Button from 'react-native-button';
+// var Display = require('react-native-device-display');
 
-var {
+import React, {
   StyleSheet,
-  Text,
   View,
   TextInput,
   Image,
-  Component,
-  SwitchIOS,
-  GlobalStore
-} = React; 
+  Component
+} from 'react-native';
 
-var Login = React.createClass({
-  goToHome: function() {
+class Login extends Component {
+  constructor (props) {
+    super(props);
+
+    this.render = this.render.bind(this);
+    this.goToHome = this.goToHome.bind(this);
+  }
+
+  goToHome () {
     this.props.navigator.push({
       name: 'App',
       index: 1
-    })
-  },
+    });
+  }
 
-  render() {
-    console.log('Render', styles.image);
+  render () {
     return (
       <Image style={styles.image} source={require('image!login')}>
         <View style={styles.container}>
@@ -41,7 +43,7 @@ var Login = React.createClass({
           <TextInput
             multiline = {false}
             placeholder = {'Password'}
-            secureTextEntry = {true}
+            secureTextEntry
             clearButtonMode={'while-editing'}
             style={styles.inputField}
             onChangeText={(text) => this.setState({password: text})}
@@ -53,7 +55,7 @@ var Login = React.createClass({
       </Image>
     );
   }
-});
+}
 
 var styles = StyleSheet.create({
   container: {
@@ -70,11 +72,11 @@ var styles = StyleSheet.create({
     opacity: 0.8
   },
   image: {
-    width: 480, //Display.width,
+    width: 480, // Display.width,
     height: 520, // Display.height,
     flex: 1,
     resizeMode: 'cover'
   }
-}); 
+});
 
 module.exports = Login;

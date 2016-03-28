@@ -7,8 +7,8 @@ import Goals from './components/goals';
 import Goal from './components/goal';
 import Profile from './components/profile';
 
-//import Icon from 'react-native-vector-icons/Ionicons';
-//const Icon = require('react-native-vector-icons/Ionicons');
+// import Icon from 'react-native-vector-icons/Ionicons';
+// const Icon = require('react-native-vector-icons/Ionicons');
 
 import React, {
   Component,
@@ -44,11 +44,11 @@ class App extends Component {
               component: Home
             }}/>
         </TabBarIOS.Item>
-        <TabBarIOS.Item title="Sessions"
+        <TabBarIOS.Item title='Sessions'
           selected={this.state.selectedTab === 'sessions'}
           onPress={() => {
             this.setState({
-              selectedTab: 'sessions',
+              selectedTab: 'sessions'
             });
           }}>
           <NavigatorIOS
@@ -61,11 +61,11 @@ class App extends Component {
               onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session })
             }}/>
         </TabBarIOS.Item>
-        <TabBarIOS.Item title="Goals"
+        <TabBarIOS.Item title='Goals'
           selected={this.state.selectedTab === 'goals'}
           onPress={() => {
             this.setState({
-              selectedTab: 'goals',
+              selectedTab: 'goals'
             });
           }}>
           <NavigatorIOS
@@ -96,9 +96,9 @@ class App extends Component {
       </TabBarIOS>
     );
   }
-};
+}
 
-var styles = StyleSheet.create({
+let styles = StyleSheet.create({
   container: {
     flex: 1
   }

@@ -14,6 +14,12 @@ let actions = {
       actionType: 'goal.add',
       goal: goal
     });
+  },
+  addInstrument: function (instrument) {
+    dispatcher.dispatch({
+      actionType: 'instrument.add',
+      instrument: instrument
+    });
   }
 };
 

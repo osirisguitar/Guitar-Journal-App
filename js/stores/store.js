@@ -1,16 +1,17 @@
 'use strict';
 
 const EventEmitter = require('events').EventEmitter;
-const apiBaseUrl = 'http://62.72.232.84:3000/';
+const apiBaseUrl = 'http://192.168.1.101:3000/';
 
 class Store {
-  constructor (changeEvent, apiRoute) {
+  constructor (changeEvent, apiRoute, transformer) {
     this.changeEvent = changeEvent;
     this.items = null;
     this.apiRoute = apiRoute;
     this.currentLimit = 10;
     this.limit = 10;
     this.eventEmitter = new EventEmitter();
+    this.transformer = transformer;
   }
 
   addItem (item) {
@@ -45,7 +46,11 @@ class Store {
         return res.json();
       })
       .then(function (resJson) {
-        store.items = resJson;
+        if (store.transformer) {
+          store.items = store.transformer(resJson);
+        } else {
+          store.items = resJson;
+        }
         store.emitChange();
       })
       .catch(error => {

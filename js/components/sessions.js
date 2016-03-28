@@ -42,6 +42,7 @@ class Sessions extends Component {
 
   sessionsChanged () {
     let loadedSessions = SessionStore.getAll();
+    console.log('sessions', loadedSessions);
     this.setState({ sessions: this.state.sessions.cloneWithRows(loadedSessions) });
   }
 
@@ -54,7 +55,7 @@ class Sessions extends Component {
       onRightButtonPress: () => this.props.navigator.push({
         title: 'Edit Session',
         component: Session,
-        passProps: { session: session }
+        passProps: { session: session, editMode: true }
       })
     });
   }
@@ -81,16 +82,24 @@ class Sessions extends Component {
 
   render () {
     return (
-      <ListView
-        dataSource={this.state.sessions}
-        renderRow={this.renderRow}
-        onEndReached={this.loadMoreSessions}
-      />
+      <View style={styles.container}>
+        <ListView
+          dataSource={this.state.sessions}
+          renderRow={this.renderRow}
+          onEndReached={this.loadMoreSessions}
+          contentInset={{bottom: 49}}
+          automaticallyAdjustContentInsets={false}
+        />
+      </View>
     );
   }
 }
 
 let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 64
+  },
   listRow: {
     flex: 1,
     height: 50,

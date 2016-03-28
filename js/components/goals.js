@@ -67,7 +67,7 @@ class Goals extends Component {
       <TouchableHighlight onPress={() => this.openGoal(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
           <View>
-            <Text style={styles.title}>({rowData.title})</Text>
+            <Text style={styles.title}>{rowData.title}</Text>
           </View>
           <View style={styles.separator}/>
         </View>
@@ -78,11 +78,14 @@ class Goals extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <SegmentedControlIOS values={['Active', 'Completed']} />
+        <SegmentedControlIOS values={['Active', 'Completed']} selectedIndex={0} />
         <ListView
+          style={styles.list}
           dataSource={this.state.goals}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreGoals}
+          contentInset={{bottom: 49}}
+          automaticallyAdjustContentInsets={false}
         />
       </View>
     );
@@ -93,6 +96,8 @@ let styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 64
+  },
+  list: {
   },
   listRow: {
     flex: 1,

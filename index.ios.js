@@ -10,10 +10,7 @@ import React, {
   AppRegistry,
   Component,
   StyleSheet,
-  Text,
-  View,
-  Navigator,
-  NavigatorIOS
+  Navigator
 } from 'react-native';
 
 class GuitarJournalApp extends Component {
@@ -22,19 +19,19 @@ class GuitarJournalApp extends Component {
   }
 
   renderNavigatorScenes (route, navigator) {
-    switch (route.name) {
-      case 'Login':
-        return <Login navigator={navigator} />
-      case 'App':
+    //switch (route.name) {
+    //  case 'Login':
+    //    return <Login navigator={navigator} />
+    //  case 'App':
         return <App navigator={navigator} />
-    } 
+    //}
   }
 
   render () {
     return (
       <Navigator
         initialRoute={{name: 'Login', index: 0}}
-        renderScene={this.renderNavigatorScenes}      
+        renderScene={this.renderNavigatorScenes}    
         configureScene={() => ({
           ...Navigator.SceneConfigs.FloatFromBottom,
           gestures: {}, // or null

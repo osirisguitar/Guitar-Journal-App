@@ -4,21 +4,24 @@ import React, {
   StyleSheet,
   Text,
   View,
+  Image,
   Component
 } from 'react-native';
 
-class Goal extends Component {
+class Instrument extends Component {
   constructor (props) {
     super(props);
     this.render = this.render.bind(this);
   }
 
   render () {
-    if (this.props.goal) {
+    if (this.props.instrument) {
       return (
         <View style={styles.container}>
+          <Image style={styles.image} source={{ uri: this.props.instrument.imageUrl }} />
           <View>
-            <Text>{this.props.goal.title}</Text>
+            <Text>{this.props.instrument.name}</Text>
+            <Text>{this.props.instrument.type}</Text>
           </View>
         </View>
       );
@@ -30,7 +33,7 @@ class Goal extends Component {
   }
 }
 
-let styles = StyleSheet.create({
+var styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 70,
@@ -44,4 +47,4 @@ let styles = StyleSheet.create({
   }
 });
 
-module.exports = Goal;
+module.exports = Instrument;
