@@ -25,7 +25,7 @@ class Instruments extends Component {
 
     this.state = {
       instruments: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2
+        rowHasChanged: (row1, row2) => { console.log(row1, row2); return row1 !== row2; }
       })
     };
   }
@@ -41,6 +41,7 @@ class Instruments extends Component {
 
   instrumentsChanged () {
     let loadedInstruments = InstrumentStore.getAll();
+    console.log('instruments are now', loadedInstruments);
     this.setState({ instruments: this.state.instruments.cloneWithRows(loadedInstruments) });
   }
 

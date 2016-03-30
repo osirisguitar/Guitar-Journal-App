@@ -5,103 +5,123 @@ import React, {
   Text,
   TextInput,
   View,
+  ScrollView,
   Image,
   Component,
   Picker
 } from 'react-native';
 
+import Button from 'react-native-button';
+
 import InstrumentStore from '../stores/instrumentStore';
-import tcomb from 'tcomb-form-native';
-const Form = tcomb.form.Form;
-
-let sessionModel = tcomb.struct({
-  date: tcomb.Date,
-  length: tcomb.Number,
-  rating: tcomb.Number
-});
-
-let formOptions = {
-  fields: {
-    date: {
-      mode: 'date'
-    }
-  }
-};
+import GoalStore from '../stores/goalStore';
+import SessionStore from '../stores/sessionStore';
 
 class Session extends Component {
   constructor (props) {
     super(props);
     this.render = this.render.bind(this);
-    this.onChange = this.onChange.bind(this);
+    this.instrumentsChanged = this.instrumentsChanged.bind(this);
+    this.goalsChanged = this.goalsChanged.bind(this);
+    this.setSessionInstrument = this.setSessionInstrument.bind(this);
+    this.setSessionGoal = this.setSessionGoal.bind(this);
+    this.updateSession = this.updateSession.bind(this);
+    this.saveSession = this.saveSession.bind(this);
     this.state = {
-      session: this.props.session,
-      instruments: InstrumentStore.getAll()
+      session: this.props.editMode ? Object.assign({}, this.props.session) : this.props.session,
+      editMode: this.props.editMode,
+      instruments: InstrumentStore.getAll(),
+      goals: GoalStore.getAll()
     };
   }
 
   componentDidMount () {
-    // Dumb closure needed because of scope set by event callback
     InstrumentStore.addChangeListener(this.instrumentsChanged);
+    GoalStore.addChangeListener(this.goalsChanged);
   }
 
   componentWillUnmount () {
     InstrumentStore.removeChangeListener(this.instrumentsChanged);
+    GoalStore.removeChangeListener(this.goalsChanged);
   }
 
   instrumentsChanged () {
     this.setState({ instruments: InstrumentStore.getAll() });
   }
 
-  onChange (value) {
-    this.setState({ session: value });
+  goalsChanged () {
+    this.setState({ goals: GoalStore.getAll() });
   }
 
-  renderInstruments (instruments) {
-    console.log('instruments', instruments);
-    if (instruments) {
-      return (
-        instruments.map(instrument => {
-          <Picker.Item key={instrument.id.toString()} value={instrument.id.toString()} label={instrument.name} />
-        })
-      );
-    } else {
-      return;
-    }
+  setSessionInstrument (instrumentId) {
+    let newInstrument = this.state.instruments.filter(instrument => {
+      return instrument.id === instrumentId;
+    })[0];
+
+    this.state.session.instrument = newInstrument;
+    this.setState({ session: this.state.session });
+  }
+
+  setSessionGoal (goalId) {
+    let newGoal = this.state.goals.filter(goal => {
+      return goal.id === goalId;
+    })[0];
+
+    this.state.session.goal = newGoal;
+    this.setState({ session: this.state.session });
+  }
+
+  updateSession (fieldName, newValue) {
+    this.state.session[fieldName] = newValue;
+    this.setState({ session: this.state.session });
+  }
+
+  saveSession () {
+    SessionStore.updateItem(this.state.session);
+    this.props.navigator.pop();
   }
 
   render () {
-    if (this.props.session) {
-      if (this.props.editMode) {
+    if (this.state.session) {
+      if (this.state.editMode) {
         return (
-          <View style={styles.container}>
-            <Form type={sessionModel} value={this.state.session} options={formOptions} onChange={this.onChange} />
-            <Text>Date</Text><TextInput value={this.props.session.date} style={styles.textInput}/>
-            <Text>Length</Text><TextInput value={this.props.session.length.toString()} style={styles.textInput}/>
-            <Text>Instrument</Text><TextInput value={this.props.session.instrument.name} style={styles.textInput}/>
+          <ScrollView style={styles.container}>
+            <Text>Date</Text><TextInput value={this.state.session.date} onChangeText={(value) => { this.updateSession('date', value); }} style={styles.textInput} />
+            <Text>Length</Text><TextInput value={this.state.session.length.toString()} onChangeText={(value) => { this.updateSession('length', value); }} style={styles.textInput}/>
             <Text>Instrument</Text>
-            <Picker selectedValue={this.props.session.instrument.id} >
+            <Picker selectedValue={this.state.session.instrument.id} onValueChange={ (value) => this.setSessionInstrument(value) } >
               {
                 this.state.instruments.map(instrument => (
                   <Picker.Item key={instrument.id} value={instrument.id} label={instrument.name} style={{ height: 50 }}/>
                 ))
               }
             </Picker>
-            <Text>Goal</Text><TextInput value={this.props.session.goal.title} style={styles.textInput}/>
-            <Text>Rating</Text><TextInput value={this.props.session.rating.toString()} style={styles.textInput}/>
-          </View>
+            <Text>Goal</Text>
+            <Picker selectedValue={this.state.session.goal.id} onValueChange={ (value) => this.setSessionGoal(value) } >
+              {
+                this.state.goals.map(goal => (
+                  <Picker.Item key={goal.id} value={goal.id} label={goal.title} style={{ height: 50 }}/>
+                ))
+              }
+            </Picker>
+            <Text>Rating</Text><TextInput value={this.state.session.rating.toString()} onChangeText={(value) => { this.updateSession('rating', value); }} style={styles.textInput}/>
+            <Button onPress={this.saveSession} style={{ height: 50 }}>
+              Save
+            </Button>
+          </ScrollView>
         );
       } else {
         return (
-          <View style={styles.container}>
-            <Image style={styles.image} source={{ uri: this.props.session.instrument ? this.props.session.instrument.imageUrl : null }} />
+          <ScrollView style={styles.container}>
+            <Image style={styles.image} source={{ uri: this.state.session.instrument ? this.state.session.instrument.imageUrl : null }} />
             <View>
-              <Text>{this.props.session.date}</Text>
-              <Text>{this.props.session.length}</Text>
-              <Text>{this.props.session.instrument.name}</Text>
-              <Text>{this.props.session.goal.title}</Text>
-              <Text>{this.props.session.rating}</Text>
+              <Text>{this.state.session.date.toString()}</Text>
+              <Text>{this.state.session.length}</Text>
+              <Text>{this.state.session.instrument.name}</Text>
+              <Text>{this.state.session.goal.title}</Text>
+              <Text>{this.state.session.rating}</Text>
             </View>
-          </View>
+          </ScrollView>
         );
       }
     } else {
@@ -115,7 +135,7 @@ class Session extends Component {
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 70,
+    //marginTop: 70,
     flexDirection: 'column'
   },
   image: {

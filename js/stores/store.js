@@ -1,7 +1,7 @@
 'use strict';
 
 const EventEmitter = require('events').EventEmitter;
-const apiBaseUrl = 'http://192.168.1.101:3000/';
+const apiBaseUrl = 'http://192.168.110.196:3000/';
 
 class Store {
   constructor (changeEvent, apiRoute, transformer) {
@@ -28,6 +28,17 @@ class Store {
 
   removeChangeListener (callback) {
     this.eventEmitter.removeListener(this.changeEvent, callback);
+  }
+
+  updateItem (updatedItem) {
+    if (this.items) {
+      let item = this.items.filter(item => {
+        return item.id === updatedItem.id;
+      })[0];
+
+      Object.assign(item, updatedItem);
+      this.emitChange();
+    }
   }
 
   getAll () {

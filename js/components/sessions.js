@@ -14,6 +14,10 @@ import React, {
   Image
 } from 'react-native';
 
+let dataSource = new ListView.DataSource({
+  rowHasChanged: (row1, row2) => { console.log('change!', row1, row2); return row1 !== row2; }
+});
+
 class Sessions extends Component {
   constructor (props) {
     super(props);
@@ -25,9 +29,7 @@ class Sessions extends Component {
     this.sessionsChanged = this.sessionsChanged.bind(this);
 
     this.state = {
-      sessions: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2
-      })
+      dataSource: dataSource
     };
   }
 
@@ -41,9 +43,7 @@ class Sessions extends Component {
   }
 
   sessionsChanged () {
-    let loadedSessions = SessionStore.getAll();
-    console.log('sessions', loadedSessions);
-    this.setState({ sessions: this.state.sessions.cloneWithRows(loadedSessions) });
+    this.setState({ dataSource: dataSource.cloneWithRows(SessionStore.getAll()) });
   }
 
   openSession (session) {
@@ -84,7 +84,7 @@ class Sessions extends Component {
     return (
       <View style={styles.container}>
         <ListView
-          dataSource={this.state.sessions}
+          dataSource={this.state.dataSource}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreSessions}
           contentInset={{bottom: 49}}
