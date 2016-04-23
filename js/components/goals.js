@@ -13,20 +13,31 @@ import React, {
   SegmentedControlIOS
 } from 'react-native';
 
+let dataSource = new ListView.DataSource({
+  rowHasChanged: (row1, row2) => { return row1 !== row2; }
+});
+
 class Goals extends Component {
   constructor (props) {
     super(props);
 
-    GoalStore.getAll();
+    let goals = GoalStore.getAll();
+    let showActive = true;
 
     this.renderRow = this.renderRow.bind(this);
     this.openGoal = this.openGoal.bind(this);
     this.goalsChanged = this.goalsChanged.bind(this);
+    this.changeFilter = this.changeFilter.bind(this);
+
+    if (goals) {
+      goals = goals.filter(goal => {
+        return goal.active === showActive;
+      });
+    }
 
     this.state = {
-      goals: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2
-      })
+      dataSource: goals ? dataSource.cloneWithRows(goals) : dataSource,
+      showActive: showActive
     };
   }
 
@@ -41,7 +52,19 @@ class Goals extends Component {
 
   goalsChanged () {
     let loadedGoals = GoalStore.getAll();
-    this.setState({ goals: this.state.goals.cloneWithRows(loadedGoals) });
+    if (loadedGoals) {
+      loadedGoals = loadedGoals.filter(goal => {
+        return goal.active === this.state.showActive;
+      });
+      this.setState({ dataSource: dataSource.cloneWithRows(loadedGoals) });
+    }
+  }
+
+  changeFilter (filterIndex) {
+    let showActive = filterIndex === 0;
+
+    this.setState({ showActive: showActive });
+    this.goalsChanged();
   }
 
   openGoal (goal) {
@@ -53,7 +76,7 @@ class Goals extends Component {
       onRightButtonPress: () => this.props.navigator.push({
         title: 'Edit Goal',
         component: Goal,
-        passProps: { goal: goal }
+        passProps: { goal: goal, editMode: true }
       })
     });
   }
@@ -78,10 +101,10 @@ class Goals extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <SegmentedControlIOS values={['Active', 'Completed']} selectedIndex={0} />
+        <SegmentedControlIOS values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
         <ListView
           style={styles.list}
-          dataSource={this.state.goals}
+          dataSource={this.state.dataSource}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreGoals}
           contentInset={{bottom: 49}}

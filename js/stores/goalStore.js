@@ -9,10 +9,14 @@ let GoalStore = new Store(CHANGE_EVENT, 'goals');
 /**
  * Register actions for GoalStore
  */
-dispatcher.register(function (action) {
-  switch (action.actionType) {
+GoalStore.dispatchToken = dispatcher.register(function (action) {
+  switch (action.type) {
     case 'goal.add':
       GoalStore.addItem(action.goal);
+      GoalStore.emitChange();
+      break;
+    case 'goal.update':
+      GoalStore.updateItem(action.goal);
       GoalStore.emitChange();
       break;
   }

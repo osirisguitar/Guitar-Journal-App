@@ -13,20 +13,23 @@ import React, {
   Image
 } from 'react-native';
 
+let dataSource = new ListView.DataSource({
+  rowHasChanged: (row1, row2) => { return row1 !== row2; }
+});
+
 class Instruments extends Component {
   constructor (props) {
     super(props);
 
-    InstrumentStore.getAll();
+    let instruments = InstrumentStore.getAll();
+    console.log('instruments', instruments);
 
     this.renderRow = this.renderRow.bind(this);
     this.openInstrument = this.openInstrument.bind(this);
     this.instrumentsChanged = this.instrumentsChanged.bind(this);
 
     this.state = {
-      instruments: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => { console.log(row1, row2); return row1 !== row2; }
-      })
+      dataSource: instruments ? dataSource.cloneWithRows(instruments) : dataSource
     };
   }
 
@@ -42,7 +45,7 @@ class Instruments extends Component {
   instrumentsChanged () {
     let loadedInstruments = InstrumentStore.getAll();
     console.log('instruments are now', loadedInstruments);
-    this.setState({ instruments: this.state.instruments.cloneWithRows(loadedInstruments) });
+    this.setState({ dataSource: dataSource.cloneWithRows(loadedInstruments) });
   }
 
   openInstrument (instrument) {
@@ -81,7 +84,7 @@ class Instruments extends Component {
   render () {
     return (
       <ListView
-        dataSource={this.state.instruments}
+        dataSource={this.state.dataSource}
         renderRow={this.renderRow}
         onEndReached={this.loadMoreInstruments}
         contentInset={{bottom: 49}}

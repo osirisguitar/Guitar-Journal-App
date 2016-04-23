@@ -58,7 +58,7 @@ class App extends Component {
               title: 'Sessions',
               component: Sessions,
               rightButtonTitle: 'New',
-              onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session })
+              onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session, passProps: { session: {}, editMode: true } })
             }}/>
         </TabBarIOS.Item>
         <TabBarIOS.Item title='Goals'
@@ -75,7 +75,7 @@ class App extends Component {
               title: 'Goals',
               component: Goals,
               rightButtonTitle: 'New',
-              onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add goal', component: Goal })
+              onRightButtonPress: () => this.refs.goalNav.push({ title: 'Add goal', component: Goal, passProps: { goal: {}, editMode: true } })
             }}/>
         </TabBarIOS.Item>
         <TabBarIOS.Item title='Profile'

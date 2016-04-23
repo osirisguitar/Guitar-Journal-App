@@ -15,21 +15,21 @@ import React, {
 } from 'react-native';
 
 let dataSource = new ListView.DataSource({
-  rowHasChanged: (row1, row2) => { console.log('change!', row1, row2); return row1 !== row2; }
+  rowHasChanged: (row1, row2) => { return row1 !== row2; }
 });
 
 class Sessions extends Component {
   constructor (props) {
     super(props);
 
-    SessionStore.getAll();
+    let sessions = SessionStore.getAll();
 
     this.renderRow = this.renderRow.bind(this);
     this.openSession = this.openSession.bind(this);
     this.sessionsChanged = this.sessionsChanged.bind(this);
 
     this.state = {
-      dataSource: dataSource
+      dataSource: sessions ? dataSource.cloneWithRows(sessions) : dataSource
     };
   }
 
@@ -43,7 +43,11 @@ class Sessions extends Component {
   }
 
   sessionsChanged () {
-    this.setState({ dataSource: dataSource.cloneWithRows(SessionStore.getAll()) });
+    let loadedSessions = SessionStore.getAll();
+
+    if (loadedSessions) {
+      this.setState({ dataSource: dataSource.cloneWithRows(loadedSessions) });
+    }
   }
 
   openSession (session) {
@@ -71,7 +75,7 @@ class Sessions extends Component {
         <View style={styles.listRow}>
           <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} />
           <View>
-            <Text style={styles.title}>{date.format('L')}: {rowData.length} minutes</Text>
+            <Text style={styles.title}>{date.format('L')}: {rowData.duration} minutes</Text>
             <Text>{rowData.goal.title} ({rowData.location})</Text>
           </View>
           <View style={styles.separator}/>

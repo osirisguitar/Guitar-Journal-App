@@ -1,10 +1,11 @@
 'use strict';
 
 const EventEmitter = require('events').EventEmitter;
-const apiBaseUrl = 'http://192.168.110.196:3000/';
+const apiBaseUrl = 'http://localhost:8000/'; // 'http://home.bornholm.se/';
 
 class Store {
   constructor (changeEvent, apiRoute, transformer) {
+    console.log('Created new store', apiRoute);
     this.changeEvent = changeEvent;
     this.items = null;
     this.apiRoute = apiRoute;
@@ -15,7 +16,25 @@ class Store {
   }
 
   addItem (item) {
-    this.items.push(item);
+    fetch(apiBaseUrl + this.apiRoute, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(item)
+    })
+    .then(res => {
+      return res.json();
+    })
+    .then(resJson => {
+      console.log('result from add', resJson.id);
+      item.id = resJson.id;
+      this.items.push(item);
+      this.emitChange();
+    })
+    .catch(err => {
+      console.log('add item error', err);
+    });
   }
 
   emitChange () {
@@ -31,10 +50,25 @@ class Store {
   }
 
   updateItem (updatedItem) {
+    console.log('Updating item', updatedItem);
     if (this.items) {
       let item = this.items.filter(item => {
         return item.id === updatedItem.id;
       })[0];
+
+      fetch(apiBaseUrl + this.apiRoute + '/' + updatedItem.id, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedItem)
+      })
+      .then(result => {
+        console.log('update item done', result);
+      })
+      .catch(err => {
+        console.log('update item error', err);
+      });
 
       Object.assign(item, updatedItem);
       this.emitChange();
@@ -49,8 +83,16 @@ class Store {
     return this.items;
   }
 
+  refresh () {
+    this.items = null;
+
+    this.getAll();
+  }
+
   getFromApi () {
     let store = this;
+
+    console.log('Getting from api: ', apiBaseUrl + this.apiRoute);
 
     fetch(apiBaseUrl + this.apiRoute, { method: 'GET' })
       .then(function (res) {

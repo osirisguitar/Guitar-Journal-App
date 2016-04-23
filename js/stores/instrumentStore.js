@@ -9,12 +9,16 @@ let InstrumentStore = new Store(CHANGE_EVENT, 'instruments');
 /**
  * Register actions for InstrumentStore
  */
-dispatcher.register(function (action) {
-  switch (action.actionType) {
+InstrumentStore.dispatchToken = dispatcher.register(function (action) {
+  switch (action.type) {
     case 'instrument.add':
       InstrumentStore.addItem(action.instrument);
       InstrumentStore.emitChange();
       break;
+    case 'instrument.update': {
+      InstrumentStore.updateItem(action.instrument);
+      InstrumentStore.emitChange();
+    }
   }
 });
 
