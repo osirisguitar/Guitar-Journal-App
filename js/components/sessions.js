@@ -73,7 +73,6 @@ class Sessions extends Component {
     return (
       <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
-          <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} />
           <View>
             <Text style={styles.title}>{date.format('L')}: {rowData.duration} minutes</Text>
             <Text>{rowData.goal.title} ({rowData.location})</Text>
@@ -87,13 +86,16 @@ class Sessions extends Component {
   render () {
     return (
       <View style={styles.container}>
+        <Image source={{ uri: 'http://chrislordalge.com/cms/wp-content/uploads/MIX-LA-3.jpg' }} style={styles.backgroundImage}>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreSessions}
           contentInset={{bottom: 49}}
           automaticallyAdjustContentInsets={false}
+          style={{backgroundColor: 'rgba(0,0,0,0.6)',marginLeft: 30,marginRight: 30}}
         />
+        </Image>
       </View>
     );
   }
@@ -102,7 +104,8 @@ class Sessions extends Component {
 let styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 64
+    marginTop: 64,
+    color: 'white'
   },
   listRow: {
     flex: 1,
@@ -110,10 +113,17 @@ let styles = StyleSheet.create({
     flexDirection: 'row',
     margin: 2,
     borderBottomColor: '#eeeeee',
-    borderBottomWidth: 1
+    borderBottomWidth: 1,
+    color: 'white'
+  },
+  backgroundImage: {
+    flex: 1,
+    /* width: null,
+    height: null,*/
+    //opacity: 0.3
   },
   separator: {
-    backgroundColor: 'black'
+    backgroundColor: 'gray'
   },
   thumb: {
     width: 50,
@@ -121,7 +131,8 @@ let styles = StyleSheet.create({
     marginRight: 5
   },
   title: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'white'
   }
 });
 

@@ -18,6 +18,7 @@ class Goal extends Component {
     super(props);
     this.render = this.render.bind(this);
     this.saveGoal = this.saveGoal.bind(this);
+    this.updateGoal = this.updateGoal.bind(this);
 
     this.state = {
       editMode: this.props.editMode,

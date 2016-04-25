@@ -28,7 +28,8 @@ class Home extends Component {
 
 var styles = StyleSheet.create({
   container: {
-    marginTop: 165
+    marginTop: 165,
+    backgroundColor: 'black'
   }
 }); 
 

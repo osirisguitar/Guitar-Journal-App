@@ -57,7 +57,7 @@ class Instruments extends Component {
       onRightButtonPress: () => this.props.navigator.push({
         title: 'Edit Instrument',
         component: Instrument,
-        passProps: { instrument: instrument }
+        passProps: { instrument: instrument, editMode: true }
       })
     });
   }
