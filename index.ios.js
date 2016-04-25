@@ -9,7 +9,6 @@ import Login from './js/components/login';
 import React, {
   AppRegistry,
   Component,
-  StyleSheet,
   Navigator
 } from 'react-native';
 
@@ -19,28 +18,29 @@ class GuitarJournalApp extends Component {
   }
 
   renderNavigatorScenes (route, navigator) {
-    //switch (route.name) {
-    //  case 'Login':
-    //    return <Login navigator={navigator} />
-    //  case 'App':
-        return <App navigator={navigator} />
-    //}
+    switch (route.name) {
+      case 'Login':
+        return <Login navigator={navigator} />;
+      case 'App':
+        return <App navigator={navigator} />;
+    }
   }
 
   render () {
     return (
       <Navigator
         initialRoute={{name: 'Login', index: 0}}
-        renderScene={this.renderNavigatorScenes}    
+        renderScene={this.renderNavigatorScenes}
         configureScene={() => ({
           ...Navigator.SceneConfigs.FloatFromBottom,
-          gestures: {}, // or null
+          gestures: {} // or null
         })}
       />
     );
   }
-};
+}
 
+/*
 var styles = StyleSheet.create({
   container: {
     flex: 1
@@ -48,17 +48,18 @@ var styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
-  },
+    marginBottom: 5
+  }
 });
+*/
 
 console.ignoredYellowBox = [
-  'Warning: Failed propType',
+  'Warning: Failed propType'
   // Other warnings you don't want like 'jsSchedulingOverhead',
 ];
 

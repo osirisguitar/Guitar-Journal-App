@@ -1,7 +1,7 @@
 'use strict';
 
-import App from '../app';
 import Button from 'react-native-button';
+import auth from '../stores/auth';
 // var Display = require('react-native-device-display');
 
 import React, {
@@ -17,14 +17,24 @@ class Login extends Component {
     super(props);
 
     this.render = this.render.bind(this);
-    this.goToHome = this.goToHome.bind(this);
+    this.logIn = this.logIn.bind(this);
+
+    this.state = {
+      email: 'test@bornholm.se',
+      password: 'test'
+    };
   }
 
-  goToHome () {
-    this.props.navigator.push({
-      name: 'App',
-      index: 1
-    });
+  logIn () {
+    return auth.login(this.state.email, this.state.password)
+      .then(success => {
+        if (success) {
+          this.props.navigator.push({
+            name: 'App',
+            index: 1
+          });
+        }
+      });
   }
 
   render () {
@@ -37,7 +47,7 @@ class Login extends Component {
             style={styles.inputField}
             keyboardType={'email-address'}
             clearButtonMode={'while-editing'}
-            defaultValue={'anders@bornholm.se'}
+            defaultValue={'test@bornholm.se'}
             onChangeText={(text) => this.setState({email: text})}
           />
           <TextInput
@@ -46,9 +56,10 @@ class Login extends Component {
             secureTextEntry
             clearButtonMode={'while-editing'}
             style={styles.inputField}
+            defaultValue={'test'}
             onChangeText={(text) => this.setState({password: text})}
           />
-          <Button onPress={this.goToHome}>
+          <Button onPress={this.logIn}>
             Log in
           </Button>
         </View>

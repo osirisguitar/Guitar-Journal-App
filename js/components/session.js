@@ -28,6 +28,7 @@ class Session extends Component {
     this.setSessionGoal = this.setSessionGoal.bind(this);
     this.updateSession = this.updateSession.bind(this);
     this.saveSession = this.saveSession.bind(this);
+
     this.state = {
       session: this.props.editMode ? Object.assign({}, this.props.session) : this.props.session,
       editMode: this.props.editMode,

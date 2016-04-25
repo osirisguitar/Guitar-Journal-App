@@ -4,6 +4,7 @@ import React, {
   StyleSheet,
   Text,
   View,
+  ScrollView,
   Image,
   Component
 } from 'react-native';
@@ -12,19 +13,28 @@ class Instrument extends Component {
   constructor (props) {
     super(props);
     this.render = this.render.bind(this);
+
+    this.state = {
+      instrument: this.props.editMode ? Object.assign({}, this.props.instrument) : this.props.instrument,
+      editMode: this.props.editMode
+    };
   }
 
   render () {
-    if (this.props.instrument) {
-      return (
-        <View style={styles.container}>
-          <Image style={styles.image} source={{ uri: this.props.instrument.imageUrl }} />
-          <View>
-            <Text>{this.props.instrument.name}</Text>
-            <Text>{this.props.instrument.type}</Text>
+    if (this.state.instrument) {
+      if (this.state.editMode) {
+
+      } else {
+        return (
+          <View style={styles.container}>
+            <Image style={styles.image} source={{ uri: this.props.instrument.imageUrl }} />
+            <View>
+              <Text>{this.props.instrument.name}</Text>
+              <Text>{this.props.instrument.type}</Text>
+            </View>
           </View>
-        </View>
-      );
+        );
+      }
     } else {
       return (
         <View/>

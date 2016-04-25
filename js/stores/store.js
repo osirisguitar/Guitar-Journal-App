@@ -1,7 +1,9 @@
 'use strict';
 
 const EventEmitter = require('events').EventEmitter;
-const apiBaseUrl = 'http://localhost:8000/'; // 'http://home.bornholm.se/';
+import config from '../config';
+import auth from './auth';
+const apiBaseUrl = config.api.baseUrl;
 
 class Store {
   constructor (changeEvent, apiRoute, transformer) {
@@ -19,7 +21,8 @@ class Store {
     fetch(apiBaseUrl + this.apiRoute, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': auth.getAuthHeader()
       },
       body: JSON.stringify(item)
     })
@@ -27,7 +30,6 @@ class Store {
       return res.json();
     })
     .then(resJson => {
-      console.log('result from add', resJson.id);
       item.id = resJson.id;
       this.items.push(item);
       this.emitChange();
@@ -59,7 +61,8 @@ class Store {
       fetch(apiBaseUrl + this.apiRoute + '/' + updatedItem.id, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': auth.getAuthHeader()
         },
         body: JSON.stringify(updatedItem)
       })
@@ -94,7 +97,14 @@ class Store {
 
     console.log('Getting from api: ', apiBaseUrl + this.apiRoute);
 
-    fetch(apiBaseUrl + this.apiRoute, { method: 'GET' })
+    fetch(apiBaseUrl + this.apiRoute,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': auth.getAuthHeader()
+        }
+      })
       .then(function (res) {
         return res.json();
       })
@@ -114,7 +124,14 @@ class Store {
   loadMoreFromApi () {
     let store = this;
 
-    fetch(apiBaseUrl + this.apiRoute + '/_skip=' + this.currentLimit + '&_limit=' + this.limit, { method: 'GET' })
+    fetch(apiBaseUrl + this.apiRoute + '/_skip=' + this.currentLimit + '&_limit=' + this.limit,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': auth.getAuthHeader()
+        }
+      })
       .then(function (res) {
         return res.json();
       })
