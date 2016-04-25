@@ -36,7 +36,6 @@ class GuitarJournalApp extends Component {
           ...Navigator.SceneConfigs.FloatFromBottom,
           gestures: {} // or null
         })}
-        style={styles.app}
       />
     );
   }
@@ -55,12 +54,8 @@ var styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5
-  },
-  app: {
-    backgroundColor: 'black'
   }
 });
-
 
 console.ignoredYellowBox = [
   'Warning: Failed propType'

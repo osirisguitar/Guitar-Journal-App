@@ -2,7 +2,6 @@
 
 import Home from './components/home';
 import Sessions from './components/sessions';
-import Sessions2 from './components/sessions2';
 import Session from './components/session';
 import Goals from './components/goals';
 import Goal from './components/goal';
@@ -15,8 +14,7 @@ import React, {
   Component,
   NavigatorIOS,
   TabBarIOS,
-  StyleSheet,
-  View
+  StyleSheet
 } from 'react-native';
 
 class App extends Component {
@@ -41,13 +39,26 @@ class App extends Component {
           <NavigatorIOS
             ref = 'homeNav'
             style={styles.container}
-            barTintColor={'black'}
-            titleTextColor={'#BD934F'}
-            tintColor={'#BD934F'}
-            itemWrapperStyle={{backgroundColor: 'black'}}
             initialRoute={{
               title: 'OSIRIS GUITAR Journal',
               component: Home
+            }}/>
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title='Stats'
+          selected={this.state.selectedTab === 'stats'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'stats'
+            });
+          }}>
+          <NavigatorIOS
+            style={styles.container}
+            ref='statsNav'
+            initialRoute={{
+              title: 'Sessions',
+              component: Sessions,
+              rightButtonTitle: 'New',
+              onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session, passProps: { session: {}, editMode: true } })
             }}/>
         </TabBarIOS.Item>
         <TabBarIOS.Item title='Sessions'
@@ -60,34 +71,9 @@ class App extends Component {
           <NavigatorIOS
             style={styles.container}
             ref='sessionNav'
-            barTintColor={'black'}
-            titleTextColor={'#BD934F'}
-            tintColor={'#BD934F'}
-            itemWrapperStyle={{backgroundColor: 'black'}}
             initialRoute={{
               title: 'Sessions',
               component: Sessions,
-              rightButtonTitle: 'New',
-              onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session, passProps: { session: {}, editMode: true } })
-            }}/>
-        </TabBarIOS.Item>
-        <TabBarIOS.Item title='Sessions2'
-          selected={this.state.selectedTab === 'sessions2'}
-          onPress={() => {
-            this.setState({
-              selectedTab: 'sessions2'
-            });
-          }}>
-          <NavigatorIOS
-            style={styles.container}
-            ref='sessionNav'
-            barTintColor={'black'}
-            titleTextColor={'#BD934F'}
-            tintColor={'#BD934F'}
-            itemWrapperStyle={{backgroundColor: 'black'}}
-            initialRoute={{
-              title: 'Sessions',
-              component: Sessions2,
               rightButtonTitle: 'New',
               onRightButtonPress: () => this.refs.sessionNav.push({ title: 'Add session', component: Session, passProps: { session: {}, editMode: true } })
             }}/>
@@ -102,10 +88,6 @@ class App extends Component {
           <NavigatorIOS
             style={styles.container}
             ref='goalNav'
-            barTintColor={'black'}
-            titleTextColor={'#BD934F'}
-            tintColor={'#BD934F'}
-            itemWrapperStyle={{backgroundColor: 'black'}}
             initialRoute={{
               title: 'Goals',
               component: Goals,
@@ -121,10 +103,6 @@ class App extends Component {
             });
           }}>
           <NavigatorIOS
-            barTintColor={'black'}
-            titleTextColor={'#BD934F'}
-            tintColor={'#BD934F'}
-            itemWrapperStyle={{backgroundColor: 'black'}}
             style={styles.container}
             ref='profileNav'
             initialRoute={{
@@ -139,8 +117,7 @@ class App extends Component {
 
 let styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'black'
+    flex: 1
   }
 });
 

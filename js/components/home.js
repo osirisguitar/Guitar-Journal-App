@@ -6,15 +6,15 @@ var {
   StyleSheet,
   Text,
   View,
-  Component,
-} = React; 
+  Component
+} = React;
 
 import InstrumentStore from '../stores/instrumentStore';
 import GoalStore from '../stores/goalStore';
 import SessionStore from '../stores/sessionStore';
 
 class Home extends Component {
-  render() {
+  render () {
     return (
       <View style={styles.container}>
         <Text>Hej HEJ</Text>
@@ -28,9 +28,8 @@ class Home extends Component {
 
 var styles = StyleSheet.create({
   container: {
-    marginTop: 165,
-    backgroundColor: 'black'
+    marginTop: 165
   }
-}); 
+});
 
 module.exports = Home;

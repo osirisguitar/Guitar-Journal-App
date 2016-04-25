@@ -73,6 +73,7 @@ class Sessions extends Component {
     return (
       <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
+          <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} />
           <View>
             <Text style={styles.title}>{date.format('L')}: {rowData.duration} minutes</Text>
             <Text>{rowData.goal.title} ({rowData.location})</Text>
@@ -86,16 +87,13 @@ class Sessions extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Image source={{ uri: 'http://chrislordalge.com/cms/wp-content/uploads/MIX-LA-3.jpg' }} style={styles.backgroundImage}>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreSessions}
           contentInset={{bottom: 49}}
           automaticallyAdjustContentInsets={false}
-          style={{backgroundColor: 'rgba(0,0,0,0.6)',marginLeft: 30,marginRight: 30}}
         />
-        </Image>
       </View>
     );
   }
