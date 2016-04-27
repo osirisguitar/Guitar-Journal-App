@@ -2,6 +2,6 @@
 
 module.exports = {
   api: {
-    baseUrl: 'http://localhost:8000/'
+    baseUrl: 'http://home.bornholm.se/' // 'http://localhost:8000/'
   }
 };

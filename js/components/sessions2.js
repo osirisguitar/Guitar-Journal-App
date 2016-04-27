@@ -3,15 +3,12 @@
 import SessionStore from '../stores/sessionStore';
 import moment from 'moment';
 import Session from './session';
-import appStyles from '../styles/appStyles';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 import React, {
   StyleSheet,
   Text,
   ListView,
   View,
-  StatusBar,
   Component,
   TouchableHighlight,
   Image
@@ -21,7 +18,7 @@ let dataSource = new ListView.DataSource({
   rowHasChanged: (row1, row2) => { return row1 !== row2; }
 });
 
-class Sessions extends Component {
+class Sessions2 extends Component {
   constructor (props) {
     super(props);
 
@@ -71,43 +68,18 @@ class Sessions extends Component {
     SessionStore.loadMoreFromApi();
   }
 
-  getStars (rating) {
-    let stars = [];
-
-    for (let i = 0; i < 5; i++) {
-      stars.push(i < rating);
-    }
-
-    let key = 0;
-    return stars.map(star => {
-      if (star) {
-        return <Icon name='ios-star' size={22} key={key++} color='white' />;
-      } else {
-        return <Icon name='ios-star-outline' size={22} key={key++} color='white' />;
-      }
-    });
-  }
-
   renderRow (rowData) {
     var date = moment(rowData.date);
     return (
-      <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor={appStyles.constants.green}>
+      <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor='#dddddd'>
         <View style={styles.listRow}>
-          <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }}>
-            <View style={styles.thumbBorder}/>
-          </Image>
-          <View style={{ flex: 1 }}>
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text style={{color: 'white'}}>{date.format('ddd D MMM')}</Text>
-              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.goal.title} ({rowData.location})</Text>
-            </View>
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text style={styles.title}>{rowData.duration} minutes</Text>
-              <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
-                {this.getStars(rowData.rating)}
-              </View>
-            </View>
+          <Image style={styles.backgroundImage} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }} >
+          <View style={{backgroundColor: 'rgba(0,0,0,0.6)', flex: 1}}>
+            <Text style={styles.title}>{date.format('L')}: {rowData.duration} minutes</Text>
+            <Text>{rowData.goal.title} ({rowData.location})</Text>
           </View>
+          <View style={styles.separator}/>
+          </Image>
         </View>
       </TouchableHighlight>
     );
@@ -116,13 +88,13 @@ class Sessions extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle={'light-content'} />
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreSessions}
           contentInset={{bottom: 49}}
-          automaticallyAdjustContentInsets
+          automaticallyAdjustContentInsets={false}
+          style={{backgroundColor: 'rgba(0,0,0,0.6)'}}
         />
       </View>
     );
@@ -131,39 +103,35 @@ class Sessions extends Component {
 
 let styles = StyleSheet.create({
   container: {
+    flex: 1,
+    marginTop: 64
   },
   listRow: {
     flex: 1,
-    height: 80,
+    height: 50,
     flexDirection: 'row',
-    borderBottomColor: appStyles.constants.gray,
-    borderBottomWidth: 1,
-    alignItems: 'center',
-    paddingLeft: 10,
-    paddingRight: 10
+    margin: 2,
+    borderBottomColor: '#eeeeee',
+    borderBottomWidth: 1
+  },
+  backgroundImage: {
+    flex: 1,
+    /* width: null,
+    height: null,*/
+    //opacity: 0.3
   },
   separator: {
-    backgroundColor: appStyles.constants.gray
+    backgroundColor: 'gray'
   },
   thumb: {
     width: 50,
     height: 50,
-    marginRight: 10,
-    borderRadius: 25
-  },
-  thumbBorder: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 2,
-    borderColor: appStyles.constants.green,
-    marginRight: 10
+    marginRight: 5
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 18,
     color: 'white'
   }
 });
 
-module.exports = Sessions;
+module.exports = Sessions2;

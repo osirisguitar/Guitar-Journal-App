@@ -61,7 +61,6 @@ var styles = StyleSheet.create({
   }
 });
 
-
 console.ignoredYellowBox = [
   'Warning: Failed propType'
   // Other warnings you don't want like 'jsSchedulingOverhead',
