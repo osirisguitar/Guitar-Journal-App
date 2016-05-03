@@ -9,6 +9,8 @@ import React, {
 } from 'react-native';
 import Instruments from './instruments';
 
+import appStyles from '../styles/appStyles';
+
 let activeViews = [ 'Profile', 'Instruments', 'Support' ];
 
 class Profile extends Component {
@@ -39,12 +41,21 @@ class Profile extends Component {
 
     return (
       <View style={styles.container}>
-        <SegmentedControlIOS values={activeViews} selectedIndex={0} onChange={ event => { console.log(activeViews[event.nativeEvent.selectedSegmentIndex]); this.setState({view: activeViews[event.nativeEvent.selectedSegmentIndex]}); } } />
+        <SegmentedControlIOS
+          values={activeViews}
+          selectedIndex={0}
+          tintColor={appStyles.constants.grayHighlight}
+          onChange={ event => { console.log(activeViews[event.nativeEvent.selectedSegmentIndex]); this.setState({view: activeViews[event.nativeEvent.selectedSegmentIndex]}); } }
+        />
         { activeView }
       </View>
     );
   }
 }
+
+Profile.propTypes = {
+  navigator: React.PropTypes.object
+};
 
 var styles = StyleSheet.create({
   container: {

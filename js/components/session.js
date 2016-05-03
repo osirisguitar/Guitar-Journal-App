@@ -8,10 +8,11 @@ import React, {
   ScrollView,
   Image,
   Component,
-  Picker
+  Picker,
+  SliderIOS
 } from 'react-native';
 
-import Button from 'react-native-button';
+import Button from './single/button';
 import moment from 'moment';
 
 import InstrumentStore from '../stores/instrumentStore';
@@ -19,6 +20,9 @@ import GoalStore from '../stores/goalStore';
 import Dispatcher from '../dispatcher/dispatcher';
 import appStyles from '../styles/appStyles';
 import Icon from 'react-native-vector-icons/Ionicons';
+import TextField from './single/textfield';
+
+import config from '../config';
 
 class Session extends Component {
   constructor (props) {
@@ -35,7 +39,9 @@ class Session extends Component {
       session: this.props.editMode ? Object.assign({}, this.props.session) : this.props.session,
       editMode: this.props.editMode,
       instruments: InstrumentStore.getAll(),
-      goals: GoalStore.getAll()
+      goals: GoalStore.getAll(),
+      pickInstrument: this.props.session.id ? false : true,
+      pickGoal: this.props.session.id ? false : true
     };
   }
 
@@ -123,48 +129,42 @@ class Session extends Component {
       if (this.state.editMode) {
         return (
           <ScrollView style={styles.container} contentContainerStyle={{justifyContent: 'center'}}>
-            <View style={{paddingTop: 16, paddingBottom: 16}}>
-              <TextInput value={moment(this.state.session.date).format('L')} onChangeText={(value) => { this.updateSession('date', new Date(value)); }} style={styles.textInput} />
-              <Icon name='calendar' size={32} color={appStyles.constants.grayHighlight} style={{position: 'absolute', top: 20, left: 10, backgroundColor: 'transparent'}} />
-            </View>
-            <View style={{paddingTop: 16, paddingBottom: 16}}>
-              <TextInput value={this.stringValue(this.state.session.duration)} onChangeText={(value) => { this.updateSession('duration', value); }} style={styles.textInput}/>
-              <Icon name='ios-timer' size={32} color={appStyles.constants.grayHighlight} style={{position: 'absolute', top: 20, left: 10, backgroundColor: 'transparent'}} />
-            </View>
-            <View style={{paddingTop: 16, paddingBottom: 16}}>
-              <TextInput value={this.state.session.location} onChangeText={(value) => { this.updateSession('location', value); }} style={styles.textInput}/>
-              <Icon name='location' size={32} color={appStyles.constants.grayHighlight} style={{position: 'absolute', top: 20, left: 10, backgroundColor: 'transparent'}} />
-            </View>
-            <Text>Notes</Text><TextInput multiline value={this.state.session.notes} onChangeText={(value) => { this.updateSession('notes', value); }} style={styles.textInput}/>
+            <TextField style={{marginTop: 5, marginBottom: 5}} icon='calendar' value={moment(this.state.session.date).format('L')} onChangeText={(value) => { this.updateSession('date', new Date(value)); }} />
+            <TextField style={{marginTop: 5, marginBottom: 5}} icon='ios-timer' placeholder='Duration in minutes' value={this.stringValue(this.state.session.duration)} onChangeText={(value) => { this.updateSession('duration', value); }} />
+            <TextField style={{marginTop: 5, marginBottom: 5}} icon='location' placeholder='Location' value={this.state.session.location} onChangeText={(value) => { this.updateSession('location', value); }} />
+            <TextField style={{marginTop: 5, marginBottom: 5}} icon='document-text' multiline placeholder='Notes' value={this.state.session.notes} onChangeText={(value) => { this.updateSession('notes', value); }} />
             <Text>Rating</Text><TextInput value={this.stringValue(this.state.session.rating)} onChangeText={(value) => { this.updateSession('rating', value); }} style={styles.textInput}/>
-            <Text>Instrument</Text>
-            <Picker selectedValue={this.state.session.instrumentId} onValueChange={ (value) => this.setSessionInstrument(value) } >
-              <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50 }}/>
-              {
-                this.state.instruments ? this.state.instruments.map(instrument => (
-                    <Picker.Item key={instrument.id} value={instrument.id} label={instrument.name} style={{ height: 50 }}/>
-                  )) : <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50 }}/>
-              }
-            </Picker>
-            <Text>Goal</Text>
-            <Picker selectedValue={this.state.session.goalId} onValueChange={ (value) => this.setSessionGoal(value) } >
-              <Picker.Item key={null} value={null} label={'Select goal'} style={{ height: 50 }}/>
-              {
-                this.state.goals ? this.state.goals.map(goal => (
-                  <Picker.Item key={goal.id} value={goal.id} label={goal.title} style={{ height: 50 }}/>
-                )) : <Picker.Item key={null} value={null} label={'Select goals'} style={{ height: 50 }}/>
-              }
-            </Picker>
-            <Button onPress={this.saveSession} style={{ height: 50 }}>
-              Save
-            </Button>
+            <SliderIOS value={this.state.session.rating} minimumValue={1} maximumValue={5} step={1} onSlidingComplete={(value) => this.updateSession('rating', value)} />
+            <Text style={[styles.textInput, styles.text]} onPress={() => this.setState({pickInstrument: !this.state.pickInstrument})}>{this.state.session.instrument ? this.state.session.instrument.name : '' }</Text>
+            {
+              this.state.pickInstrument ? <Picker selectedValue={this.state.session.instrumentId} style={[styles.textInput, styles.picker]} itemStyle={{color: 'white'}} onValueChange={ (value) => { value ? this.setSessionInstrument(value) : null; this.setState({pickInstrument: false}); } } >
+                  <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50, color: 'white' }} />
+                  {
+                    this.state.instruments ? this.state.instruments.map(instrument => (
+                        <Picker.Item key={instrument.id} value={instrument.id} label={instrument.name} style={{ height: 50, color: 'white' }}/>
+                      )) : <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50, color: 'white' }}/>
+                  }
+                </Picker> : <Text/>
+            }
+            <Text style={[styles.textInput, styles.text]} onPress={() => this.setState({pickGoal: !this.state.pickGoal})}>{this.state.session.goal ? this.state.session.goal.title : ''}</Text>
+            {
+              this.state.pickGoal ? <Picker selectedValue={this.state.session.goalId} style={[styles.textInput, styles.picker]} itemStyle={{color: 'white'}} onValueChange={ (value) => { value ? this.setSessionGoal(value) : null; this.setState({pickGoal: false}); } } >
+                  <Picker.Item key={null} value={null} label={'Select goal'} style={{ height: 50, color: 'white', paddingLeft: 0 }} />
+                  {
+                    this.state.goals ? this.state.goals.map(goal => (
+                        <Picker.Item key={goal.id} value={goal.id} label={goal.title} style={{ height: 50, color: 'white' }}/>
+                      )) : <Picker.Item key={null} value={null} label={'Select goal'} style={{ height: 50, color: 'white' }}/>
+                  }
+                </Picker> : <Text/>
+            }
+            <Button onPress={this.saveSession} text='SAVE' backgroundColor={appStyles.constants.greenHighlight} color={'white'} />
           </ScrollView>
         );
       } else {
         return (
           <ScrollView style={styles.container} contentContainerStyle={{alignItems: 'flex-start'}}>
             <View style={{alignItems: 'center', alignSelf: 'stretch', marginTop: 20, marginBottom: 20}}>
-              <Image style={styles.image} source={{ uri: this.state.session.instrument ? this.state.session.instrument.imageUrl : null }}>
+              <Image style={styles.image} source={{ uri: this.state.session.instrument ? config.fixImageUrl(this.state.session.instrument.imageUrl) : null }}>
                 <View style={styles.imageBorder}/>
               </Image>
             </View>
@@ -202,11 +202,18 @@ class Session extends Component {
   }
 }
 
+Session.propTypes = {
+  navigator: React.PropTypes.object,
+  editMode: React.PropTypes.bool,
+  session: React.PropTypes.object
+};
+
 var styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     paddingLeft: 20,
-    paddingRight: 20
+    paddingRight: 20,
+    paddingTop: 20
   },
   image: {
     width: 250,
@@ -221,12 +228,22 @@ var styles = StyleSheet.create({
     borderColor: appStyles.constants.green
   },
   textInput: {
-    height: 40,
-    paddingLeft: 46,
+    height: 50,
+    paddingLeft: 48,
+    justifyContent: 'center',
     backgroundColor: appStyles.constants.gray,
     borderColor: 'gray',
-    borderWidth: 1,
-    color: 'white'
+    borderWidth: 1
+  },
+  text: {
+    paddingTop: 12,
+    color: 'white',
+    fontSize: 18
+  },
+  picker: {
+    paddingLeft: 0,
+    height: 200,
+    marginBottom: 20
   }
 });
 

@@ -26,6 +26,35 @@ module.exports = {
     tabBar: {
       flex: 1,
       backgroundColor: constants.bgColor
+    },
+    listRow: {
+      flex: 1,
+      height: 80,
+      flexDirection: 'row',
+      borderBottomColor: constants.gray,
+      borderBottomWidth: 1,
+      alignItems: 'center',
+      paddingLeft: 10,
+      paddingRight: 10
+    },
+    listThumb: {
+      width: 50,
+      height: 50,
+      marginRight: 10,
+      borderRadius: 25
+    },
+    listThumbBorder: {
+      width: 50,
+      height: 50,
+      borderRadius: 25,
+      borderWidth: 2,
+      borderColor: constants.green,
+      marginRight: 10
+    },
+    listTitle: {
+      fontWeight: 'bold',
+      fontSize: 18,
+      color: 'white'
     }
   }),
   constants: constants

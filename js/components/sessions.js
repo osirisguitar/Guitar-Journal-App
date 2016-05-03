@@ -5,6 +5,7 @@ import moment from 'moment';
 import Session from './session';
 import appStyles from '../styles/appStyles';
 import Icon from 'react-native-vector-icons/Ionicons';
+import config from '../config';
 
 import React, {
   StyleSheet,
@@ -92,9 +93,9 @@ class Sessions extends Component {
     var date = moment(rowData.date);
     return (
       <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor={appStyles.constants.green}>
-        <View style={styles.listRow}>
-          <Image style={styles.thumb} source={{ uri: rowData.instrument ? rowData.instrument.imageUrl : null }}>
-            <View style={styles.thumbBorder}/>
+        <View style={appStyles.styles.listRow}>
+          <Image style={appStyles.styles.listThumb} source={{ uri: rowData.instrument ? config.fixImageUrl(rowData.instrument.imageUrl) : null }}>
+            <View style={appStyles.styles.listThumbBorder}/>
           </Image>
           <View style={{ flex: 1 }}>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -102,7 +103,7 @@ class Sessions extends Component {
               <Text style={{color: 'white', textAlign: 'right'}}>{rowData.goal.title} ({rowData.location})</Text>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text style={styles.title}>{rowData.duration} minutes</Text>
+              <Text style={appStyles.styles.listTitle}>{rowData.duration} minutes</Text>
               <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
                 {this.getStars(rowData.rating)}
               </View>
@@ -129,41 +130,11 @@ class Sessions extends Component {
   }
 }
 
+Sessions.propTypes = {
+  navigator: React.PropTypes.object
+};
+
 let styles = StyleSheet.create({
-  container: {
-  },
-  listRow: {
-    flex: 1,
-    height: 80,
-    flexDirection: 'row',
-    borderBottomColor: appStyles.constants.gray,
-    borderBottomWidth: 1,
-    alignItems: 'center',
-    paddingLeft: 10,
-    paddingRight: 10
-  },
-  separator: {
-    backgroundColor: appStyles.constants.gray
-  },
-  thumb: {
-    width: 50,
-    height: 50,
-    marginRight: 10,
-    borderRadius: 25
-  },
-  thumbBorder: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 2,
-    borderColor: appStyles.constants.green,
-    marginRight: 10
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    color: 'white'
-  }
 });
 
 module.exports = Sessions;

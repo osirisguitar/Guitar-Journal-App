@@ -13,6 +13,8 @@ import React, {
   SegmentedControlIOS
 } from 'react-native';
 
+import appStyles from '../styles/appStyles';
+
 let dataSource = new ListView.DataSource({
   rowHasChanged: (row1, row2) => { return row1 !== row2; }
 });
@@ -101,7 +103,7 @@ class Goals extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <SegmentedControlIOS values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
+        <SegmentedControlIOS tintColor={appStyles.constants.redHighlight} values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
         <ListView
           style={styles.list}
           dataSource={this.state.dataSource}
@@ -114,6 +116,10 @@ class Goals extends Component {
     );
   }
 }
+
+Goals.propTypes = {
+  navigator: React.PropTypes.object
+};
 
 let styles = StyleSheet.create({
   container: {

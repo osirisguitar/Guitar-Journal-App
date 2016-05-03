@@ -2,7 +2,7 @@
 
 import Home from './components/home';
 import Sessions from './components/sessions';
-import Sessions2 from './components/sessions2';
+import Stats from './components/stats';
 import Session from './components/session';
 import Goals from './components/goals';
 import Goal from './components/goal';
@@ -16,8 +16,7 @@ import React, {
   Component,
   NavigatorIOS,
   TabBarIOS,
-  StyleSheet,
-  View
+  StyleSheet
 } from 'react-native';
 
 /* const tintColors = {
@@ -70,7 +69,7 @@ class App extends Component {
               component: Home
             }}/>
         </Icon.TabBarItem>
-        <Icon.TabBarItem 
+        <Icon.TabBarItem
           title='Sessions'
           iconName='ios-list'
           selectedIconName='ios-list'
@@ -113,7 +112,7 @@ class App extends Component {
             itemWrapperStyle={{backgroundColor: appStyles.constants.bgColor}}
             initialRoute={{
               title: 'Stats',
-              component: Sessions2
+              component: Stats
             }}/>
         </Icon.TabBarItem>
         <Icon.TabBarItem

@@ -13,6 +13,9 @@ import React, {
   Image
 } from 'react-native';
 
+import appStyles from '../styles/appStyles';
+import config from '../config';
+
 let dataSource = new ListView.DataSource({
   rowHasChanged: (row1, row2) => { return row1 !== row2; }
 });
@@ -66,16 +69,31 @@ class Instruments extends Component {
     InstrumentStore.loadMoreFromApi();
   }
 
+  transformDuration (minutes) {
+    if (minutes < 60) {
+      return minutes + ' min';
+    } else {
+      return Math.floor(minutes / 60) + ' h ' + minutes % 60 + ' min';
+    }
+  }
+
   renderRow (rowData) {
     return (
-      <TouchableHighlight onPress={() => this.openInstrument(rowData)} underlayColor='#dddddd'>
-        <View style={styles.listRow}>
-          <Image style={styles.thumb} source={{ uri: rowData.imageUrl }} />
-          <View>
-            <Text style={styles.title}>{rowData.name}</Text>
-            <Text>{rowData.type}</Text>
+      <TouchableHighlight onPress={() => this.openInstrument(rowData)} underlayColor={appStyles.constants.gray}>
+        <View style={appStyles.styles.listRow}>
+          <Image style={appStyles.styles.listThumb} source={{ uri: config.fixImageUrl(rowData.imageUrl) }} onError={(event) => { console.log('Error!', event.nativeEvent.error); }} onLoadStart={(event) => { console.log('Loading image', event); }} onLoadEnd={(event) => { console.log('Image loaded', event); }}>
+            <View style={appStyles.styles.listThumbBorder}/>
+          </Image>
+          <View style={{ flex: 1 }}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              <Text style={{color: 'white'}}>{rowData.type}</Text>
+              <Text style={{color: 'white'}}>{this.transformDuration(rowData.sessionDurations)}</Text>
+            </View>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              <Text style={appStyles.styles.listTitle}>{rowData.name}</Text>
+              <Text style={appStyles.styles.listTitle}>{rowData.sessions} sessions</Text>             
+            </View>
           </View>
-          <View style={styles.separator}/>
         </View>
       </TouchableHighlight>
     );
@@ -88,32 +106,13 @@ class Instruments extends Component {
         renderRow={this.renderRow}
         onEndReached={this.loadMoreInstruments}
         contentInset={{bottom: 49}}
-        automaticallyAdjustContentInsets={false}
       />
     );
   }
 }
 
-let styles = StyleSheet.create({
-  listRow: {
-    flex: 1,
-    height: 50,
-    flexDirection: 'row',
-    margin: 2,
-    borderBottomColor: '#eeeeee',
-    borderBottomWidth: 1
-  },
-  separator: {
-    backgroundColor: 'black'
-  },
-  thumb: {
-    width: 50,
-    height: 50,
-    marginRight: 5
-  },
-  title: {
-    fontWeight: 'bold'
-  }
-});
+Instruments.propTypes = {
+  navigator: React.PropTypes.object
+};
 
 module.exports = Instruments;
