@@ -6,6 +6,7 @@ import Stats from './components/stats';
 import Session from './components/session';
 import Goals from './components/goals';
 import Goal from './components/goal';
+import Instrument from './components/instrument';
 import Profile from './components/profile';
 import appStyles from './styles/appStyles';
 
@@ -158,7 +159,8 @@ class App extends Component {
             ref='profileNav'
             initialRoute={{
               title: 'Profile',
-              component: Profile
+              component: Profile,
+              onRightButtonPress: () => this.refs.profileNav.push({ title: 'Add instrument', component: Instrument, passProps: { instrument: {}, editMode: true } })
             }}/>
         </Icon.TabBarItem>
       </TabBarIOS>

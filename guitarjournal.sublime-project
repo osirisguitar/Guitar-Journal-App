@@ -1,24 +1,26 @@
 {
-  "command":
-  [
-    "semistandard",
-    "-F",
-    "--stdin"
-  ],
-  "folders":
-  [
-    {
-      "folder_exclude_patterns":
-      [
-        "node_modules",
-        "tmp"
-      ],
-      "path": "."
-    }
-  ],
-  "format_on_save": true,
-  "tab_size": 2,
-  "tab_width": 2,
-  "translate_tabs_to_spaces": true
+	"command":
+	[
+		"semistandard",
+		"-F",
+		"--stdin"
+	],
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"node_modules",
+				"tmp"
+			],
+			"path": "."
+		},
+		{
+			"path": "/Users/abo/Dropbox/Development/Guitar-Journal-API"
+		}
+	],
+	"format_on_save": true,
+	"tab_size": 2,
+	"tab_width": 2,
+	"translate_tabs_to_spaces": true
 }
-

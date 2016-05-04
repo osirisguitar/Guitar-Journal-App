@@ -12,6 +12,7 @@
     "object-assign": "^4.0.1",
     "react-native": "^0.22.0",
     "react-native-button": "^1.4.2",
+    "react-native-fbsdk": "^0.1.0",
     "react-native-fm-picker": "0.0.4",
     "react-native-image-picker": "^0.18.15",
     "react-native-material-design-styles": "^0.2.6",

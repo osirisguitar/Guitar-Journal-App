@@ -25,7 +25,6 @@ class Instruments extends Component {
     super(props);
 
     let instruments = InstrumentStore.getAll();
-    console.log('instruments', instruments);
 
     this.renderRow = this.renderRow.bind(this);
     this.openInstrument = this.openInstrument.bind(this);
@@ -37,7 +36,6 @@ class Instruments extends Component {
   }
 
   componentDidMount () {
-    // Dumb closure needed because of scope set by event callback
     InstrumentStore.addChangeListener(this.instrumentsChanged);
   }
 
@@ -47,7 +45,6 @@ class Instruments extends Component {
 
   instrumentsChanged () {
     let loadedInstruments = InstrumentStore.getAll();
-    console.log('instruments are now', loadedInstruments);
     this.setState({ dataSource: dataSource.cloneWithRows(loadedInstruments) });
   }
 
@@ -81,7 +78,7 @@ class Instruments extends Component {
     return (
       <TouchableHighlight onPress={() => this.openInstrument(rowData)} underlayColor={appStyles.constants.gray}>
         <View style={appStyles.styles.listRow}>
-          <Image style={appStyles.styles.listThumb} source={{ uri: config.fixImageUrl(rowData.imageUrl) }} onError={(event) => { console.log('Error!', event.nativeEvent.error); }} onLoadStart={(event) => { console.log('Loading image', event); }} onLoadEnd={(event) => { console.log('Image loaded', event); }}>
+          <Image style={appStyles.styles.listThumb} source={{ uri: config.fixImageUrl(rowData.imageUrl) }}>
             <View style={appStyles.styles.listThumbBorder}/>
           </Image>
           <View style={{ flex: 1 }}>
@@ -91,7 +88,7 @@ class Instruments extends Component {
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={appStyles.styles.listTitle}>{rowData.name}</Text>
-              <Text style={appStyles.styles.listTitle}>{rowData.sessions} sessions</Text>             
+              <Text style={appStyles.styles.listTitle}>{rowData.sessions} sessions</Text>
             </View>
           </View>
         </View>

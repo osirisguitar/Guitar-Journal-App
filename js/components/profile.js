@@ -32,6 +32,9 @@ class Profile extends Component {
         activeView = <Text>Profile</Text>;
         break;
       case 'Instruments':
+        console.log('right', this.props.navigator.rightButtonTitle);
+        this.props.navigator.rightButtonTitle = 'New';
+        console.log('right', this.props.navigator.rightButtonTitle);
         activeView = <Instruments navigator={this.props.navigator} />;
         break;
       case 'Support':
