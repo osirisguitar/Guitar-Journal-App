@@ -3,6 +3,7 @@
 import Button from './single/button';
 import auth from '../stores/auth';
 import TextField from './single/textfield';
+import { LoginButton, AccessToken } from 'react-native-fbsdk';
 
 import React, {
   StyleSheet,
@@ -19,11 +20,21 @@ class Login extends Component {
 
     this.render = this.render.bind(this);
     this.logIn = this.logIn.bind(this);
+    this.logInFaceBook = this.logInFaceBook.bind(this);
 
     this.state = {
       email: 'anders@bornholm.se',
       password: 'test'
     };
+
+    AccessToken.getCurrentAccessToken()
+      .then(token => {
+        if (token) {
+          this.logInFaceBook(token.accessToken);
+        }
+      })
+      .catch(() => {
+      });
   }
 
   logIn () {
@@ -32,8 +43,18 @@ class Login extends Component {
       .then(success => {
         if (success) {
           this.props.navigator.push({
-            name: 'App',
-            index: 1
+            name: 'App'
+          });
+        }
+      });
+  }
+
+  logInFaceBook (fbAccessToken) {
+    return auth.loginFaceBook(fbAccessToken)
+      .then(success => {
+        if (success) {
+          this.props.navigator.push({
+            name: 'App'
           });
         }
       });
@@ -49,12 +70,34 @@ class Login extends Component {
             <View style={{alignItems: 'center', marginTop: 20}}>
               <Button backgroundColor={appStyles.constants.greenHighlight} color='white' onPress={this.logIn} text='LOG IN'/>
             </View>
+            <View style={{alignItems: 'center', marginTop: 20}}>
+              <LoginButton
+                readPermissions={['email']}
+                onLoginFinished={
+                (error, result) => {
+                  if (error) {
+                    alert("login has error: " + result.error);
+                  } else if (result.isCancelled) {
+                    alert("login is cancelled.");
+                  } else {
+                    AccessToken.getCurrentAccessToken()
+                      .then(token => {
+                        this.logInFaceBook(token.accessToken);
+                      });
+                  }
+                }
+              }/>
+            </View>
           </View>
         </Image>
       </View>
     );
   }
 }
+
+Login.propTypes = {
+  navigator: React.PropTypes.object
+};
 
 var styles = StyleSheet.create({
   container: {

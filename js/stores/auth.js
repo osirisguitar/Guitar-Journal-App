@@ -25,11 +25,37 @@ function login (userName, password) {
     });
 }
 
+function loginFaceBook (fbAccessToken) {
+  return fetch(config.api.baseUrl + 'token',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fbAccessToken: fbAccessToken
+      })
+    })
+    .then(res => {
+      return res.json();
+    })
+    .then(resJson => {
+      authHeader = 'Bearer ' + resJson.userToken;
+      return true;
+    });
+}
+
 function getAuthHeader () {
   return authHeader;
 }
 
+function logout () {
+  authHeader = undefined;
+}
+
 module.exports = {
   getAuthHeader,
-  login
+  login,
+  loginFaceBook,
+  logout
 };

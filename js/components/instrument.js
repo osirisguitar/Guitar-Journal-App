@@ -13,6 +13,8 @@ import React, {
 import Button from './single/button';
 import Dispatcher from '../dispatcher/dispatcher';
 import TextField from './single/textfield';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 var ImagePickerManager = require('NativeModules').ImagePickerManager;
 
 import appStyles from '../styles/appStyles';
@@ -75,6 +77,14 @@ class Instrument extends Component {
     this.props.navigator.pop();
   }
 
+  transformDuration (minutes) {
+    if (minutes < 60) {
+      return minutes + ' min';
+    } else {
+      return Math.floor(minutes / 60) + ' h ' + minutes % 60 + ' min';
+    }
+  }
+
   openImagePicker () {
     ImagePickerManager.showImagePicker(imagePickerOptions, (response) => {
       if (response.didCancel) {
@@ -102,20 +112,34 @@ class Instrument extends Component {
                 </Image>
               </TouchableHighlight>
             </View>
-            <TextField value={this.state.instrument.name} onChangeText={(value) => { this.updateInstrument('name', value); }} style={{marginTop: 5, marginBottom: 5}} icon='document-text' />
-            <TextField value={this.state.instrument.type} onChangeText={(value) => { this.updateInstrument('type', value); }} style={{marginTop: 5, marginBottom: 5}} icon='document-text' />
+            <TextField value={this.state.instrument.name} placeholder={'Name'} onChangeText={(value) => { this.updateInstrument('name', value); }} style={{marginTop: 5, marginBottom: 5}} icon='pricetag' />
+            <TextField value={this.state.instrument.type} placeholder={'Type'} onChangeText={(value) => { this.updateInstrument('type', value); }} style={{marginTop: 5, marginBottom: 5}} icon='information-circled' />
+            <TextField value={this.state.instrument.description} placeholder={'Description'} onChangeText={(value) => { this.updateInstrument('description', value); }} style={{marginTop: 5, marginBottom: 5}} icon='document-text' />
             <Button onPress={this.saveInstrument} style={{ height: 50 }} text={'Save'} color={'white'} backgroundColor={appStyles.constants.gray}/>
           </ScrollView>
         );
       } else {
         return (
-          <View style={styles.container}>
-            <Image style={styles.image} source={{ uri: config.fixImageUrl(this.state.instrument.imageUrl) }} />
-            <View>
-              <Text>{this.props.instrument.name}</Text>
-              <Text>{this.props.instrument.type}</Text>
+          <ScrollView style={styles.container}>
+            <View style={{alignItems: 'center', alignSelf: 'stretch', marginTop: 20, marginBottom: 20}}>
+              <Image style={styles.image} source={{ uri: config.fixImageUrl(this.state.instrument.imageUrl) }}>
+                <View style={styles.imageBorder}/>
+              </Image>
             </View>
-          </View>
+            <View>
+              <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
+                <Icon name='pricetag' size={20} color='white' style={{marginTop: 1}}/>
+                <Text style={{color: 'white', fontSize: 20, marginLeft: 5, marginBottom: 5}}>{this.props.instrument.name}</Text>
+              </View>
+              <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start',marginBottom: 10}}>
+                <Icon name='information-circled' size={20} color='white' style={{marginTop: 1}}/>
+                <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}>{this.props.instrument.type}</Text>
+              </View>
+              <View>
+                <Text numberOfLines={5} style={{color: 'white', fontStyle: 'italic', fontSize: 16, marginTop: 10, marginLeft: 5, textAlign: 'left'}}>Used in {this.props.instrument.sessions} sessions for a total time of {this.transformDuration(this.props.instrument.sessionDurations)}</Text>
+              </View>
+            </View>
+          </ScrollView>
         );
       }
     } else {
@@ -149,7 +173,7 @@ var styles = StyleSheet.create({
     height: 250,
     borderRadius: 125,
     borderWidth: 5,
-    borderColor: appStyles.constants.green
+    borderColor: appStyles.constants.gray
   },
   textInput: { height: 40, width: 200, borderColor: 'gray', borderWidth: 1 }
 });

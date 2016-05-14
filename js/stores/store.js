@@ -7,7 +7,6 @@ const apiBaseUrl = config.api.baseUrl;
 
 class Store {
   constructor (changeEvent, apiRoute, transformer) {
-    console.log('Created new store', apiRoute);
     this.changeEvent = changeEvent;
     this.items = null;
     this.apiRoute = apiRoute;
@@ -35,7 +34,7 @@ class Store {
       this.emitChange();
     })
     .catch(err => {
-      console.log('add item error', err);
+      console.error('add item error', err);
     });
   }
 
@@ -52,7 +51,6 @@ class Store {
   }
 
   updateItem (updatedItem) {
-    console.log('Updating item', updatedItem);
     if (this.items) {
       let item = this.items.filter(item => {
         return item.id === updatedItem.id;
@@ -66,11 +64,8 @@ class Store {
         },
         body: JSON.stringify(updatedItem)
       })
-      .then(result => {
-        console.log('update item done', result);
-      })
       .catch(err => {
-        console.log('update item error', err);
+        console.error('update item error', err);
       });
 
       Object.assign(item, updatedItem);
@@ -94,8 +89,6 @@ class Store {
 
   getFromApi () {
     let store = this;
-
-    console.log('Getting from api: ', apiBaseUrl + this.apiRoute);
 
     fetch(apiBaseUrl + this.apiRoute,
       {
@@ -143,7 +136,7 @@ class Store {
         }
       })
       .catch(error => {
-        console.log('Network error', error);
+        console.error('Network error', error);
       });
   }
 }

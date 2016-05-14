@@ -160,7 +160,8 @@ class App extends Component {
             initialRoute={{
               title: 'Profile',
               component: Profile,
-              onRightButtonPress: () => this.refs.profileNav.push({ title: 'Add instrument', component: Instrument, passProps: { instrument: {}, editMode: true } })
+              passProps: { parentNavigator: this.props.navigator },
+              onRightButtonPress: () => this.refs.profileNav.push({ title: 'Add instrument', component: Instrument, passProps: { instrument: {}, editMode: true, parentNavigator: this.props.navigator } })
             }}/>
         </Icon.TabBarItem>
       </TabBarIOS>

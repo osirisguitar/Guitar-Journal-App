@@ -7,8 +7,9 @@ import React, {
   Component,
   SegmentedControlIOS
 } from 'react-native';
-import Instruments from './instruments';
+import { LoginButton, AccessToken } from 'react-native-fbsdk';
 
+import Instruments from './instruments';
 import appStyles from '../styles/appStyles';
 
 let activeViews = [ 'Profile', 'Instruments', 'Support' ];
@@ -16,6 +17,7 @@ let activeViews = [ 'Profile', 'Instruments', 'Support' ];
 class Profile extends Component {
   constructor (props) {
     super(props);
+    console.log('nav', Object.keys(props));
 
     this.render = this.render.bind(this);
 
@@ -29,12 +31,17 @@ class Profile extends Component {
 
     switch (this.state.view) {
       case 'Profile':
-        activeView = <Text>Profile</Text>;
+        activeView = <View>
+            <Text>{}</Text>
+            <LoginButton
+              onLogoutFinished={() => {
+                this.props.parentNavigator.pop();
+              }}
+            />
+          </View>;
         break;
       case 'Instruments':
-        console.log('right', this.props.navigator.rightButtonTitle);
         this.props.navigator.rightButtonTitle = 'New';
-        console.log('right', this.props.navigator.rightButtonTitle);
         activeView = <Instruments navigator={this.props.navigator} />;
         break;
       case 'Support':

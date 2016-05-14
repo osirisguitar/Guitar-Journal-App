@@ -23,8 +23,9 @@ class Goals extends Component {
   constructor (props) {
     super(props);
 
-    let goals = GoalStore.getAll();
     let showActive = true;
+
+    let goals = GoalStore.getAll();
 
     this.renderRow = this.renderRow.bind(this);
     this.openGoal = this.openGoal.bind(this);
@@ -33,7 +34,7 @@ class Goals extends Component {
 
     if (goals) {
       goals = goals.filter(goal => {
-        return goal.active === showActive;
+        return !goal.completed;
       });
     }
 
@@ -56,7 +57,7 @@ class Goals extends Component {
     let loadedGoals = GoalStore.getAll();
     if (loadedGoals) {
       loadedGoals = loadedGoals.filter(goal => {
-        return goal.active === this.state.showActive;
+        return this.state.showActive ? !goal.completed : goal.completed;
       });
       this.setState({ dataSource: dataSource.cloneWithRows(loadedGoals) });
     }
