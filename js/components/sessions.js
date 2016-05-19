@@ -32,6 +32,8 @@ class Sessions extends Component {
     this.openSession = this.openSession.bind(this);
     this.sessionsChanged = this.sessionsChanged.bind(this);
 
+    console.log('Timezoneoffset', new Date().getTimezoneOffset());
+
     this.state = {
       dataSource: sessions ? dataSource.cloneWithRows(sessions) : dataSource
     };
@@ -97,16 +99,19 @@ class Sessions extends Component {
           <Image style={appStyles.styles.listThumb} source={{ uri: rowData.instrument ? config.fixImageUrl(rowData.instrument.imageUrl) : null }}>
             <View style={appStyles.styles.listThumbBorder}/>
           </Image>
-          <View style={{ flex: 1 }}>
+          <View style={{ flex: 1 }}>          
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text style={{color: 'white'}}>{date.format('ddd D MMM')}</Text>
-              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.goal.title} ({rowData.location})</Text>
+              <Text style={{color: 'white'}}>{date.calendar()}</Text>
+              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.location}</Text>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={appStyles.styles.listTitle}>{rowData.duration} minutes</Text>
               <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
                 {this.getStars(rowData.rating)}
               </View>
+            </View>
+            <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
+              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.goal.title}</Text>
             </View>
           </View>
         </View>
@@ -122,8 +127,7 @@ class Sessions extends Component {
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
           onEndReached={this.loadMoreSessions}
-          contentInset={{bottom: 49}}
-          automaticallyAdjustContentInsets
+          automaticallyAdjustContentInsets={false}
         />
       </View>
     );
@@ -135,6 +139,11 @@ Sessions.propTypes = {
 };
 
 let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop:60,
+    marginBottom:50
+  }
 });
 
 module.exports = Sessions;

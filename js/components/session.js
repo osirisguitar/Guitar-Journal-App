@@ -9,6 +9,7 @@ import React, {
   Image,
   Component,
   Picker,
+  DatePickerIOS,
   SliderIOS
 } from 'react-native';
 
@@ -21,6 +22,7 @@ import Dispatcher from '../dispatcher/dispatcher';
 import appStyles from '../styles/appStyles';
 import Icon from 'react-native-vector-icons/Ionicons';
 import TextField from './single/textfield';
+import RatingField from './single/ratingfield';
 
 import config from '../config';
 
@@ -36,7 +38,7 @@ class Session extends Component {
     this.saveSession = this.saveSession.bind(this);
 
     this.state = {
-      session: this.props.editMode ? Object.assign({}, this.props.session) : this.props.session,
+      session: this.props.editMode ? Object.assign({ date: new Date() }, this.props.session) : this.props.session,
       editMode: this.props.editMode,
       instruments: InstrumentStore.getAll(),
       goals: GoalStore.getAll(),
@@ -84,11 +86,16 @@ class Session extends Component {
   }
 
   updateSession (fieldName, newValue) {
+    if (fieldName === 'date') {
+      console.log('new date', newValue);
+    }
+
     this.state.session[fieldName] = newValue;
     this.setState({ session: this.state.session });
   }
 
   saveSession () {
+    console.log('Saving', this.state.session.date);
     if (this.state.session.id) {
       Dispatcher.dispatch({
         type: 'session.update',
@@ -129,13 +136,15 @@ class Session extends Component {
       if (this.state.editMode) {
         return (
           <ScrollView style={styles.container} contentContainerStyle={{justifyContent: 'center'}}>
-            <TextField style={{marginTop: 5, marginBottom: 5}} icon='calendar' value={moment(this.state.session.date).format('L')} onChangeText={(value) => { this.updateSession('date', new Date(value)); }} />
+            <TextField style={{marginTop: 5, marginBottom: 5}} icon='calendar' readOnly onPress={() => this.setState({pickDate: !this.state.pickDate})} value={moment(this.state.session.date).format('L LT')} />
+            {
+              this.state.pickDate ? <DatePickerIOS mode='datetime' date={this.state.session.date} onDateChange={(value) => this.updateSession('date', value)} /> : <View/>
+            }
             <TextField style={{marginTop: 5, marginBottom: 5}} icon='ios-timer' placeholder='Duration in minutes' value={this.stringValue(this.state.session.duration)} onChangeText={(value) => { this.updateSession('duration', value); }} />
             <TextField style={{marginTop: 5, marginBottom: 5}} icon='location' placeholder='Location' value={this.state.session.location} onChangeText={(value) => { this.updateSession('location', value); }} />
             <TextField style={{marginTop: 5, marginBottom: 5}} icon='document-text' multiline placeholder='Notes' value={this.state.session.notes} onChangeText={(value) => { this.updateSession('notes', value); }} />
-            <Text>Rating</Text><TextInput value={this.stringValue(this.state.session.rating)} onChangeText={(value) => { this.updateSession('rating', value); }} style={styles.textInput}/>
-            <SliderIOS value={this.state.session.rating} minimumValue={1} maximumValue={5} step={1} onSlidingComplete={(value) => this.updateSession('rating', value)} />
-            <Text style={[styles.textInput, styles.text]} onPress={() => this.setState({pickInstrument: !this.state.pickInstrument})}>{this.state.session.instrument ? this.state.session.instrument.name : '' }</Text>
+            <RatingField style={{marginTop: 5, marginBottom: 5}} value={this.state.session.rating} onRatingChange={(value) => { this.updateSession('rating', value); }} />
+            <Text style={[styles.textInput, styles.text, {marginTop: 5}]} onPress={() => this.setState({pickInstrument: !this.state.pickInstrument})}>{this.state.session.instrument ? this.state.session.instrument.name : '' }</Text>
             {
               this.state.pickInstrument ? <Picker selectedValue={this.state.session.instrumentId} style={[styles.textInput, styles.picker]} itemStyle={{color: 'white'}} onValueChange={ (value) => { value ? this.setSessionInstrument(value) : null; this.setState({pickInstrument: false}); } } >
                   <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50, color: 'white' }} />
@@ -144,9 +153,9 @@ class Session extends Component {
                         <Picker.Item key={instrument.id} value={instrument.id} label={instrument.name} style={{ height: 50, color: 'white' }}/>
                       )) : <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50, color: 'white' }}/>
                   }
-                </Picker> : <Text/>
+                </Picker> : <View/>
             }
-            <Text style={[styles.textInput, styles.text]} onPress={() => this.setState({pickGoal: !this.state.pickGoal})}>{this.state.session.goal ? this.state.session.goal.title : ''}</Text>
+            <Text style={[styles.textInput, styles.text, {marginTop: 10}]} numberOfLines={1} onPress={() => this.setState({pickGoal: !this.state.pickGoal})}>{this.state.session.goal ? this.state.session.goal.title : ''}</Text>
             {
               this.state.pickGoal ? <Picker selectedValue={this.state.session.goalId} style={[styles.textInput, styles.picker]} itemStyle={{color: 'white'}} onValueChange={ (value) => { value ? this.setSessionGoal(value) : null; this.setState({pickGoal: false}); } } >
                   <Picker.Item key={null} value={null} label={'Select goal'} style={{ height: 50, color: 'white', paddingLeft: 0 }} />
@@ -155,9 +164,11 @@ class Session extends Component {
                         <Picker.Item key={goal.id} value={goal.id} label={goal.title} style={{ height: 50, color: 'white' }}/>
                       )) : <Picker.Item key={null} value={null} label={'Select goal'} style={{ height: 50, color: 'white' }}/>
                   }
-                </Picker> : <Text/>
+                </Picker> : <View/>
             }
-            <Button onPress={this.saveSession} text='SAVE' backgroundColor={appStyles.constants.greenHighlight} color={'white'} />
+            <View style={{ marginTop: 15 }}>
+              <Button onPress={this.saveSession} text='SAVE' backgroundColor={appStyles.constants.greenHighlight} color={'white'} />
+            </View>
           </ScrollView>
         );
       } else {
@@ -168,26 +179,30 @@ class Session extends Component {
                 <View style={styles.imageBorder}/>
               </Image>
             </View>
-            <View style={{flexDirection: 'column', alignItems: 'flex-start', alignSelf: 'stretch'}}>
-              <Text style={{color: 'white', fontSize: 16}}>{moment(this.state.session.date).format('ddd D MMM YYYY')}</Text>
+            <View style={{flexDirection: 'column', alignItems: 'flex-start', alignSelf: 'stretch', overflow:'hidden'}}>
+              <Text style={{color: 'white', fontSize: 16}}>{moment(this.state.session.date).format('ddd D MMM YYYY hh:mm')}</Text>
               <View style={{flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'stretch', marginTop: 5, marginBottom: 5}}>
                 <Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{this.state.session.duration} minutes</Text>
-                <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'flex-end', marginTop: 3}}>
                   {this.getStars(this.state.session.rating)}
                 </View>
               </View>
-              <View style={{flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'stretch'}}>
-                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
-                  <Icon name='ios-home' size={20} color='white' style={{marginTop: 1}}/>
-                  <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}>{this.state.session.location}</Text>
+              { this.state.session.location ? <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
+                <View style={{ width: 20, alignItems: 'center'}}>
+                  <Icon name='pinpoint' size={20} color='white' style={{marginTop: 3}}/>
                 </View>
-                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
-                  <Icon name='trophy' size={20} color='white' style={{marginTop: 1}}/>
-                  <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}>{this.state.session.goal.title}</Text>
+                <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}>{this.state.session.location}</Text>
+              </View> : <View/> }
+              { this.state.session.goal ? <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
+                <View style={{ width: 20, alignItems: 'center'}}>
+                  <Icon name='trophy' size={20} color='white' style={{marginTop: 3}}/>
                 </View>
-              </View>
-              <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', marginTop: 10}}>
-                <Icon name='document-text' size={16} color='white' style={{marginTop: 1}}/>
+                <Text style={{flex:0, color: 'white', fontSize: 20, marginLeft: 5}} numberOfLines={1}>{this.state.session.goal.title}</Text>
+              </View> : <View/> }
+              <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', marginTop: 20}}>
+                <View style={{ width: 20, alignItems: 'center'}}>
+                  <Icon name='document-text' size={20} color='white' style={{marginTop: 1}}/>
+                </View>
                 <Text numberOfLines={5} style={{color: 'white', fontStyle: 'italic', fontSize: 16, marginLeft: 5, textAlign: 'left'}}>{this.state.session.notes}</Text>
               </View>
             </View>
@@ -213,7 +228,7 @@ var styles = StyleSheet.create({
     flexDirection: 'column',
     paddingLeft: 20,
     paddingRight: 20,
-    paddingTop: 20
+    paddingTop: 0
   },
   image: {
     width: 250,

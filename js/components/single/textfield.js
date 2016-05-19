@@ -2,6 +2,7 @@
 
 import React, {
   TextInput,
+  Text,
   Component,
   View,
   StyleSheet
@@ -18,20 +19,28 @@ class TextField extends Component {
   }
 
   render () {
+    let textComponent;
+
+    if (this.props.readOnly) {
+      textComponent = <Text style={styles.textInput} onPress={this.props.onPress}>{this.props.value}</Text>;
+    } else {
+      textComponent = <TextInput
+        style={[styles.textInput, this.props.multiline && styles.multiline]}
+        defaultValue={this.props.defaultValue}
+        placeholder={this.props.placeholder}
+        keyboardType={this.props.keyboardType}
+        onChangeText={this.props.onChangeText}
+        clearButtonMode={'while-editing'}
+        secureTextEntry={this.props.secureTextEntry}
+        value={this.props.value}
+        placeholderTextColor={appStyles.constants.grayHighlight}
+        multiline={this.props.multiline}
+      />;
+    }
+
     return (
       <View style={this.props.style}>
-        <TextInput
-          style={[styles.textInput, this.props.multiline && styles.multiline]}
-          defaultValue={this.props.defaultValue}
-          placeholder={this.props.placeholder}
-          keyboardType={this.props.keyboardType}
-          onChangeText={this.props.onChangeText}
-          clearButtonMode={'while-editing'}
-          secureTextEntry={this.props.secureTextEntry}
-          value={this.props.value}
-          placeholderTextColor={appStyles.constants.grayHighlight}
-          multiline={this.props.multiline}
-        />
+        { textComponent }
         <View style={{width: 32, position: 'absolute', top: 9, left: 8, backgroundColor: 'transparent', alignItems: 'center'}}>
           <Icon name={this.props.icon} size={32} color={appStyles.constants.grayHighlight} />
         </View>
@@ -41,6 +50,8 @@ class TextField extends Component {
 }
 
 TextField.propTypes = {
+  readOnly: React.PropTypes.bool,
+  onPress: React.PropTypes.func,
   defaultValue: React.PropTypes.string,
   placeholder: React.PropTypes.string,
   keyboardType: React.PropTypes.string,

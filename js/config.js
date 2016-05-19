@@ -1,6 +1,6 @@
 'use strict';
 
-const baseUrl = /* 'http://home.bornholm.se/';*/ 'http://192.168.88.6:8000/';
+const baseUrl = /* 'http://home.bornholm.se/';*/ /*'http://192.168.110.166:8000/'*/ 'http://192.168.88.6:8000/';
 
 module.exports = {
   api: {
