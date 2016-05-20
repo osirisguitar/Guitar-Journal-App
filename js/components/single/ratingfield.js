@@ -58,7 +58,7 @@ class RatingField extends Component {
 RatingField.propTypes = {
   onRatingChange: React.PropTypes.func,
   style: React.PropTypes.object,
-  value: React.PropTypes.string
+  value: React.PropTypes.number
 };
 
 var styles = StyleSheet.create({

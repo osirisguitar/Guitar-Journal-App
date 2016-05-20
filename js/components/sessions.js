@@ -141,8 +141,8 @@ Sessions.propTypes = {
 let styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:60,
-    marginBottom:50
+    marginTop: 60,
+    marginBottom: 50
   }
 });
 

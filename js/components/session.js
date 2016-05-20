@@ -3,14 +3,12 @@
 import React, {
   StyleSheet,
   Text,
-  TextInput,
   View,
   ScrollView,
   Image,
   Component,
   Picker,
-  DatePickerIOS,
-  SliderIOS
+  DatePickerIOS
 } from 'react-native';
 
 import Button from './single/button';
@@ -136,15 +134,15 @@ class Session extends Component {
       if (this.state.editMode) {
         return (
           <ScrollView style={styles.container} contentContainerStyle={{justifyContent: 'center'}}>
-            <TextField style={{marginTop: 5, marginBottom: 5}} icon='calendar' readOnly onPress={() => this.setState({pickDate: !this.state.pickDate})} value={moment(this.state.session.date).format('L LT')} />
+            <TextField style={{ marginTop: 10 }} icon='calendar' readOnly onPress={() => this.setState({pickDate: !this.state.pickDate})} value={moment(this.state.session.date).format('L LT')} />
             {
-              this.state.pickDate ? <DatePickerIOS mode='datetime' date={this.state.session.date} onDateChange={(value) => this.updateSession('date', value)} /> : <View/>
+              this.state.pickDate ? <DatePickerIOS mode='datetime' style={[styles.textInput, styles.picker]} date={this.state.session.date} onDateChange={(value) => this.updateSession('date', value)} /> : <View/>
             }
-            <TextField style={{marginTop: 5, marginBottom: 5}} icon='ios-timer' placeholder='Duration in minutes' value={this.stringValue(this.state.session.duration)} onChangeText={(value) => { this.updateSession('duration', value); }} />
+            <TextField style={{marginTop: 10, marginBottom: 5}} icon='ios-timer' placeholder='Duration in minutes' value={this.stringValue(this.state.session.duration)} onChangeText={(value) => { this.updateSession('duration', value); }} />
             <TextField style={{marginTop: 5, marginBottom: 5}} icon='location' placeholder='Location' value={this.state.session.location} onChangeText={(value) => { this.updateSession('location', value); }} />
             <TextField style={{marginTop: 5, marginBottom: 5}} icon='document-text' multiline placeholder='Notes' value={this.state.session.notes} onChangeText={(value) => { this.updateSession('notes', value); }} />
             <RatingField style={{marginTop: 5, marginBottom: 5}} value={this.state.session.rating} onRatingChange={(value) => { this.updateSession('rating', value); }} />
-            <Text style={[styles.textInput, styles.text, {marginTop: 5}]} onPress={() => this.setState({pickInstrument: !this.state.pickInstrument})}>{this.state.session.instrument ? this.state.session.instrument.name : '' }</Text>
+            <TextField style={{ marginTop: 5 }} icon='settings' readOnly onPress={() => this.setState({pickInstrument: !this.state.pickInstrument})} value={this.state.session.instrument ? this.state.session.instrument.name : ''} />
             {
               this.state.pickInstrument ? <Picker selectedValue={this.state.session.instrumentId} style={[styles.textInput, styles.picker]} itemStyle={{color: 'white'}} onValueChange={ (value) => { value ? this.setSessionInstrument(value) : null; this.setState({pickInstrument: false}); } } >
                   <Picker.Item key={null} value={null} label={'Select instrument'} style={{ height: 50, color: 'white' }} />
@@ -155,7 +153,7 @@ class Session extends Component {
                   }
                 </Picker> : <View/>
             }
-            <Text style={[styles.textInput, styles.text, {marginTop: 10}]} numberOfLines={1} onPress={() => this.setState({pickGoal: !this.state.pickGoal})}>{this.state.session.goal ? this.state.session.goal.title : ''}</Text>
+            <TextField style={{ marginTop: 10 }} icon='trophy' readOnly onPress={() => this.setState({pickGoal: !this.state.pickGoal})} value={this.state.session.goal ? this.state.session.goal.title : ''} />
             {
               this.state.pickGoal ? <Picker selectedValue={this.state.session.goalId} style={[styles.textInput, styles.picker]} itemStyle={{color: 'white'}} onValueChange={ (value) => { value ? this.setSessionGoal(value) : null; this.setState({pickGoal: false}); } } >
                   <Picker.Item key={null} value={null} label={'Select goal'} style={{ height: 50, color: 'white', paddingLeft: 0 }} />
@@ -188,23 +186,23 @@ class Session extends Component {
                 </View>
               </View>
               { this.state.session.location ? <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
-                <View style={{ width: 20, alignItems: 'center'}}>
+                <View style={{ width: 20, alignItems: 'center' }}>
                   <Icon name='pinpoint' size={20} color='white' style={{marginTop: 3}}/>
                 </View>
                 <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}>{this.state.session.location}</Text>
               </View> : <View/> }
               { this.state.session.goal ? <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
-                <View style={{ width: 20, alignItems: 'center'}}>
+                <View style={{ width: 20, alignItems: 'center' }}>
                   <Icon name='trophy' size={20} color='white' style={{marginTop: 3}}/>
                 </View>
                 <Text style={{flex:0, color: 'white', fontSize: 20, marginLeft: 5}} numberOfLines={1}>{this.state.session.goal.title}</Text>
               </View> : <View/> }
-              <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', marginTop: 20}}>
+              { this.state.session.notes ? <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', marginTop: 20}}>
                 <View style={{ width: 20, alignItems: 'center'}}>
                   <Icon name='document-text' size={20} color='white' style={{marginTop: 1}}/>
                 </View>
                 <Text numberOfLines={5} style={{color: 'white', fontStyle: 'italic', fontSize: 16, marginLeft: 5, textAlign: 'left'}}>{this.state.session.notes}</Text>
-              </View>
+              </View> : <View/> }
             </View>
           </ScrollView>
         );

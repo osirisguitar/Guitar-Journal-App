@@ -14,6 +14,7 @@ import React, {
 } from 'react-native';
 
 import appStyles from '../styles/appStyles';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 let dataSource = new ListView.DataSource({
   rowHasChanged: (row1, row2) => { return row1 !== row2; }
@@ -88,14 +89,30 @@ class Goals extends Component {
     GoalStore.loadMoreFromApi();
   }
 
+  transformDuration (minutes) {
+    if (minutes < 60) {
+      return minutes + ' min';
+    } else {
+      return Math.floor(minutes / 60) + ' h ' + minutes % 60 + ' min';
+    }
+  }
+
   renderRow (rowData) {
     return (
-      <TouchableHighlight onPress={() => this.openGoal(rowData)} underlayColor='#dddddd'>
-        <View style={styles.listRow}>
+      <TouchableHighlight onPress={() => this.openGoal(rowData)} underlayColor={appStyles.constants.redHighlight}>
+        <View style={[appStyles.styles.listRow, { height: 60 }]}>
           <View>
-            <Text style={styles.title}>{rowData.title}</Text>
+            <Icon style={{marginLeft:11, marginRight:20, marginTop: 3}} size={32} name='trophy' color='white' />
+            <View style={[appStyles.styles.listThumbBorder, {position: 'absolute', top: -6, left: 0, borderColor: appStyles.constants.redHighlight }]}/>
           </View>
-          <View style={styles.separator}/>
+          <View style={{ flex: 1 }}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              <Text style={appStyles.styles.listTitle} numberOfLines={1}>{rowData.title}</Text>
+            </View>
+            <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
+              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.sessions} sessions, {this.transformDuration(rowData.sessionDurations)}</Text>
+            </View>
+          </View>
         </View>
       </TouchableHighlight>
     );
@@ -104,13 +121,11 @@ class Goals extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <SegmentedControlIOS tintColor={appStyles.constants.redHighlight} values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
+        <SegmentedControlIOS style={{marginTop:10,marginBottom:10,marginLeft:10,marginRight:10}} tintColor={appStyles.constants.redHighlight} values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
         <ListView
-          style={styles.list}
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
-          onEndReached={this.loadMoreGoals}
-          contentInset={{bottom: 49}}
+          onEndReached={this.loadMoreSessions}
           automaticallyAdjustContentInsets={false}
         />
       </View>
@@ -125,9 +140,8 @@ Goals.propTypes = {
 let styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 64
-  },
-  list: {
+    marginTop: 60,
+    marginBottom: 50
   },
   listRow: {
     flex: 1,

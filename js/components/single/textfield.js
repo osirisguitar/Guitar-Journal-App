@@ -22,7 +22,7 @@ class TextField extends Component {
     let textComponent;
 
     if (this.props.readOnly) {
-      textComponent = <Text style={styles.textInput} onPress={this.props.onPress}>{this.props.value}</Text>;
+      textComponent = <Text style={[styles.textInput, styles.readOnly]} numberOfLines={1} onPress={this.props.onPress}>{this.props.value}</Text>;
     } else {
       textComponent = <TextInput
         style={[styles.textInput, this.props.multiline && styles.multiline]}
@@ -39,7 +39,7 @@ class TextField extends Component {
     }
 
     return (
-      <View style={this.props.style}>
+      <View style={[this.props.style]}>
         { textComponent }
         <View style={{width: 32, position: 'absolute', top: 9, left: 8, backgroundColor: 'transparent', alignItems: 'center'}}>
           <Icon name={this.props.icon} size={32} color={appStyles.constants.grayHighlight} />
@@ -67,11 +67,15 @@ var styles = StyleSheet.create({
   textInput: {
     height: 50,
     paddingLeft: 48,
+    paddingRight: 10,
     backgroundColor: appStyles.constants.gray,
     borderColor: 'gray',
     borderWidth: 1,
     color: 'white',
     fontSize: 18
+  },
+  readOnly: {
+    paddingTop: 14
   },
   multiline: {
     height: 120,
