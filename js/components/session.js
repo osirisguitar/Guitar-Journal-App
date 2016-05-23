@@ -84,10 +84,6 @@ class Session extends Component {
   }
 
   updateSession (fieldName, newValue) {
-    if (fieldName === 'date') {
-      console.log('new date', newValue);
-    }
-
     this.state.session[fieldName] = newValue;
     this.setState({ session: this.state.session });
   }
@@ -177,7 +173,7 @@ class Session extends Component {
                 <View style={styles.imageBorder}/>
               </Image>
             </View>
-            <View style={{flexDirection: 'column', alignItems: 'flex-start', alignSelf: 'stretch', overflow:'hidden'}}>
+            <View style={{flexDirection: 'column', alignItems: 'flex-start', alignSelf: 'stretch', overflow: 'hidden'}}>
               <Text style={{color: 'white', fontSize: 16}}>{moment(this.state.session.date).format('ddd D MMM YYYY hh:mm')}</Text>
               <View style={{flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'stretch', marginTop: 5, marginBottom: 5}}>
                 <Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{this.state.session.duration} minutes</Text>
@@ -195,10 +191,10 @@ class Session extends Component {
                 <View style={{ width: 20, alignItems: 'center' }}>
                   <Icon name='trophy' size={20} color='white' style={{marginTop: 3}}/>
                 </View>
-                <Text style={{flex:0, color: 'white', fontSize: 20, marginLeft: 5}} numberOfLines={1}>{this.state.session.goal.title}</Text>
+                <Text style={{flex: 0, color: 'white', fontSize: 20, marginLeft: 5}} numberOfLines={1}>{this.state.session.goal.title}</Text>
               </View> : <View/> }
               { this.state.session.notes ? <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', marginTop: 20}}>
-                <View style={{ width: 20, alignItems: 'center'}}>
+                <View style={{ width: 20, alignItems: 'center' }}>
                   <Icon name='document-text' size={20} color='white' style={{marginTop: 1}}/>
                 </View>
                 <Text numberOfLines={5} style={{color: 'white', fontStyle: 'italic', fontSize: 16, marginLeft: 5, textAlign: 'left'}}>{this.state.session.notes}</Text>

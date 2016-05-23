@@ -102,8 +102,8 @@ class Goals extends Component {
       <TouchableHighlight onPress={() => this.openGoal(rowData)} underlayColor={appStyles.constants.redHighlight}>
         <View style={[appStyles.styles.listRow, { height: 60 }]}>
           <View>
-            <Icon style={{marginLeft:11, marginRight:20, marginTop: 3}} size={32} name='trophy' color='white' />
-            <View style={[appStyles.styles.listThumbBorder, {position: 'absolute', top: -6, left: 0, borderColor: appStyles.constants.redHighlight }]}/>
+            <Icon style={{marginLeft: 11, marginRight: 20, marginTop: 3}} size={32} name='trophy' color='white' />
+            <View style={[appStyles.styles.listThumbBorder, { position: 'absolute', top: -6, left: 0, borderColor: appStyles.constants.redHighlight }]}/>
           </View>
           <View style={{ flex: 1 }}>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -121,7 +121,7 @@ class Goals extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <SegmentedControlIOS style={{marginTop:10,marginBottom:10,marginLeft:10,marginRight:10}} tintColor={appStyles.constants.redHighlight} values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
+        <SegmentedControlIOS style={{marginTop: 10, marginBottom: 10, marginLeft: 10, marginRight: 10}} tintColor={appStyles.constants.redHighlight} values={['Active', 'Completed']} selectedIndex={0} onChange={ event => this.changeFilter(event.nativeEvent.selectedSegmentIndex) } />
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
