@@ -32,8 +32,6 @@ class Sessions extends Component {
     this.openSession = this.openSession.bind(this);
     this.sessionsChanged = this.sessionsChanged.bind(this);
 
-    console.log('Timezoneoffset', new Date().getTimezoneOffset());
-
     this.state = {
       dataSource: sessions ? dataSource.cloneWithRows(sessions) : dataSource
     };
@@ -102,16 +100,12 @@ class Sessions extends Component {
           <View style={{ flex: 1 }}>          
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={{color: 'white'}}>{date.calendar()}</Text>
-              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.location}</Text>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Text style={appStyles.styles.listTitle}>{rowData.duration} minutes</Text>
               <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
                 {this.getStars(rowData.rating)}
               </View>
-            </View>
-            <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
-              <Text style={{color: 'white', textAlign: 'right'}}>{rowData.goal.title}</Text>
             </View>
           </View>
         </View>
@@ -141,7 +135,7 @@ Sessions.propTypes = {
 let styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 60,
+    marginTop: 65,
     marginBottom: 50
   }
 });

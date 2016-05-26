@@ -17,7 +17,6 @@ let activeViews = [ 'Profile', 'Instruments', 'Support' ];
 class Profile extends Component {
   constructor (props) {
     super(props);
-    console.log('nav', Object.keys(props));
 
     this.render = this.render.bind(this);
 
@@ -55,7 +54,7 @@ class Profile extends Component {
           values={activeViews}
           selectedIndex={0}
           tintColor={appStyles.constants.grayHighlight}
-          onChange={ event => { console.log(activeViews[event.nativeEvent.selectedSegmentIndex]); this.setState({view: activeViews[event.nativeEvent.selectedSegmentIndex]}); } }
+          onChange={ event => { this.setState({view: activeViews[event.nativeEvent.selectedSegmentIndex]}); } }
         />
         { activeView }
       </View>

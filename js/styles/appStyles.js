@@ -29,7 +29,7 @@ module.exports = {
     },
     listRow: {
       flex: 1,
-      height: 80,
+      height: 60,
       flexDirection: 'row',
       borderBottomColor: constants.gray,
       borderBottomWidth: 1,

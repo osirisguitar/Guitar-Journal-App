@@ -3,13 +3,9 @@
 const dispatcher = require('../dispatcher/dispatcher');
 const CHANGE_EVENT = 'sessions.change';
 import Store from './store';
-import GoalStore from './goalStore';
-import InstrumentStore from './instrumentStore';
 
 function transformer (items) {
   return items.map(item => {
-    console.log('date', item.date);
-
     if (item.date) {
       item.date = new Date(item.date);
     }
@@ -18,7 +14,12 @@ function transformer (items) {
   });
 }
 
+console.log('Creating SessionStore');
+
 let SessionStore = new Store(CHANGE_EVENT, 'sessions', transformer);
+
+import GoalStore from './goalStore';
+import InstrumentStore from './instrumentStore';
 
 /**
  * Register actions for SessionStore
@@ -46,4 +47,6 @@ SessionStore.dispatchToken = dispatcher.register(function (action) {
   }
 });
 
-module.exports = SessionStore;
+console.log('SessionStore', SessionStore);
+
+export default SessionStore;

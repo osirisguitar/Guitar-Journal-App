@@ -6,12 +6,12 @@ var {
   StyleSheet,
   Text,
   View,
-  Component,
+  Component
 } = React; 
 
+import SessionStore from '../stores/sessionStore';
 import InstrumentStore from '../stores/instrumentStore';
 import GoalStore from '../stores/goalStore';
-import SessionStore from '../stores/sessionStore';
 
 class Home extends Component {
   render() {
