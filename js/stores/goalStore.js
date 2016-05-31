@@ -25,8 +25,8 @@ GoalStore.dispatchToken = dispatcher.register(function (action) {
     case 'session.add':
     case 'session.update':
       dispatcher.waitFor([SessionStore.dispatchToken]);
-      SessionStore.refresh();
-      SessionStore.emitChange();
+      GoalStore.refresh();
+      GoalStore.emitChange();
       break;
   }
 });
