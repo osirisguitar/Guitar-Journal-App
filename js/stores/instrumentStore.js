@@ -25,8 +25,8 @@ InstrumentStore.dispatchToken = dispatcher.register(function (action) {
     case 'session.add':
     case 'session.update':
       dispatcher.waitFor([SessionStore.dispatchToken]);
-      SessionStore.refresh();
-      SessionStore.emitChange();
+      InstrumentStore.refresh();
+      InstrumentStore.emitChange();
       break;
   }
 });
