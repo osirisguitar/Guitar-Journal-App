@@ -16,6 +16,10 @@ class Store {
     this.transformer = transformer;
   }
 
+  getDispatchToken () {
+    return this.dispatchToken;
+  }
+
   addItem (item) {
     fetch(apiBaseUrl + this.apiRoute, {
       method: 'POST',

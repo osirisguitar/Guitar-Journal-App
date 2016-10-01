@@ -14,8 +14,6 @@ function transformer (items) {
   });
 }
 
-console.log('Creating SessionStore');
-
 let SessionStore = new Store(CHANGE_EVENT, 'sessions', transformer);
 
 import GoalStore from './goalStore';
@@ -35,18 +33,16 @@ SessionStore.dispatchToken = dispatcher.register(function (action) {
       SessionStore.emitChange();
       break;
     case 'goal.update':
-      dispatcher.waitFor([GoalStore.dispatchToken]);
+      dispatcher.waitFor([GoalStore.getDispatchToken()]);
       SessionStore.refresh();
       SessionStore.emitChange();
       break;
     case 'instrument.update':
-      dispatcher.waitFor([InstrumentStore.dispatchToken]);
+      dispatcher.waitFor([InstrumentStore.getDispatchToken()]);
       SessionStore.refresh();
       SessionStore.emitChange();
       break;
   }
 });
-
-console.log('SessionStore', SessionStore);
 
 export default SessionStore;

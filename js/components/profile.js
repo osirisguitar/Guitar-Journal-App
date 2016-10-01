@@ -10,6 +10,7 @@ import React, {
 import { LoginButton, AccessToken } from 'react-native-fbsdk';
 
 import Instruments from './instruments';
+import ProfileDetails from './profileDetails';
 import appStyles from '../styles/appStyles';
 
 let activeViews = [ 'Profile', 'Instruments', 'Support' ];
@@ -31,6 +32,7 @@ class Profile extends Component {
     switch (this.state.view) {
       case 'Profile':
         activeView = <View>
+          <ProfileDetails></ProfileDetails>
             <Text>{}</Text>
             <LoginButton
               onLogoutFinished={() => {

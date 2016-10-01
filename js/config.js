@@ -1,6 +1,6 @@
 'use strict';
 
-const baseUrl = /* 'http://home.bornholm.se/';*/ /*'http://192.168.110.166:8000/'*/ 'http://192.168.88.6:8000/';
+const baseUrl = 'http://api.journal.osirisguitar.com/'; //  'http://192.168.1.101:8000/'; */ 'http://192.168.88.10:8000/';
 
 module.exports = {
   api: {
@@ -8,6 +8,7 @@ module.exports = {
   },
   fixImageUrl: (url) => {
     if (url && !url.startsWith('data:image/jpeg;base64,')) {
+      console.log('returning', baseUrl + url.substring(1));
       return baseUrl + url.substring(1);
     } else {
       return url;

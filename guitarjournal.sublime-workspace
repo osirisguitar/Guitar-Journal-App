@@ -1,0 +1,4093 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fb",
+				"fbAccessToken"
+			],
+			[
+				"getU",
+				"getUserEmailFromFaceBook〔function〕"
+			],
+			[
+				"login",
+				"logInFaceBook"
+			],
+			[
+				"index",
+				"indexService"
+			],
+			[
+				"ima",
+				"imageFile"
+			],
+			[
+				"inst",
+				"instrumentId"
+			],
+			[
+				"instru",
+				"instrumentId"
+			],
+			[
+				"Session",
+				"SessionStore"
+			],
+			[
+				"sen",
+				"sentRequests"
+			],
+			[
+				"got",
+				"gottenResponses"
+			],
+			[
+				"quu",
+				"queueName"
+			],
+			[
+				"filter",
+				"filtered"
+			],
+			[
+				"from",
+				"fromModeration"
+			],
+			[
+				"remaining",
+				"remainingAds"
+			],
+			[
+				"que",
+				"queues"
+			],
+			[
+				"queue",
+				"queueName"
+			],
+			[
+				"list",
+				"listeners"
+			],
+			[
+				"subs",
+				"subscribeToQueueEvents"
+			],
+			[
+				"dup",
+				"duplicateCount"
+			],
+			[
+				"process",
+				"processPromises"
+			],
+			[
+				"du",
+				"duplicateCount"
+			],
+			[
+				"blocketA",
+				"blocketApiService"
+			],
+			[
+				"blocket",
+				"blocketSampleService"
+			],
+			[
+				"blo",
+				"blocketSampleService"
+			],
+			[
+				"pro",
+				"processBlocketSearch"
+			],
+			[
+				"intern",
+				"internalApiService"
+			],
+			[
+				"add",
+				"addIdToQueue"
+			],
+			[
+				"ini",
+				"initialRetrieved"
+			],
+			[
+				"start",
+				"startPageOffset"
+			],
+			[
+				"proc",
+				"processBlocketSearch"
+			],
+			[
+				"queu",
+				"queueService"
+			],
+			[
+				"in",
+				"internalApiService"
+			],
+			[
+				"ad",
+				"adSearchResult"
+			],
+			[
+				"respon",
+				"responseString"
+			],
+			[
+				"response",
+				"responseString"
+			],
+			[
+				"respone",
+				"responseObj"
+			],
+			[
+				"sub",
+				"subscribeDelayed"
+			],
+			[
+				"sample",
+				"sampleTypeId"
+			],
+			[
+				"sampl",
+				"sampleUrl"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"fir",
+				"firstCall"
+			],
+			[
+				"fi",
+				"firstCall"
+			],
+			[
+				"incomin",
+				"incomingAd"
+			],
+			[
+				"status",
+				"statusOnSite"
+			],
+			[
+				"statu",
+				"statusOnSite"
+			],
+			[
+				"staus",
+				"statusOnSite"
+			],
+			[
+				"to",
+				"toProcessor"
+			],
+			[
+				"conve",
+				"convertedAd"
+			],
+			[
+				"qu",
+				"queueId"
+			],
+			[
+				"sched",
+				"scheduledEndTime"
+			],
+			[
+				"sche",
+				"scheduledEndTime"
+			],
+			[
+				"convert",
+				"convertedAd"
+			],
+			[
+				"proto",
+				"protocol"
+			],
+			[
+				"url",
+				"urlParameter"
+			],
+			[
+				"internal",
+				"internalApiClient"
+			],
+			[
+				"faild",
+				"failedFromBlocket"
+			],
+			[
+				"ret",
+				"retrievedAd"
+			],
+			[
+				"retri",
+				"retrievedAd"
+			],
+			[
+				"retr",
+				"retrieveAd"
+			],
+			[
+				"json",
+				"jsonAd"
+			],
+			[
+				"con",
+				"con\tconsole-log"
+			],
+			[
+				"conver",
+				"convertedAd"
+			],
+			[
+				"ids",
+				"idsFromBlocket"
+			],
+			[
+				"rq",
+				"requireDir"
+			],
+			[
+				"o",
+				"originalAd"
+			],
+			[
+				"rem",
+				"remoteId"
+			],
+			[
+				"tran",
+				"transformedAd"
+			],
+			[
+				"trans",
+				"transformedAd"
+			],
+			[
+				"gene",
+				"generateApiDocSchemaObject"
+			],
+			[
+				"property",
+				"currentProperty"
+			],
+			[
+				"ge",
+				"generateSchemaObjectApiDoc"
+			],
+			[
+				"gen",
+				"generateSchemaApiDoc"
+			],
+			[
+				"curren",
+				"currentProperty"
+			],
+			[
+				"gener",
+				"generateSchemaApiDoc"
+			],
+			[
+				"export",
+				"exportedObject"
+			],
+			[
+				"expo",
+				"exportSchemaToFile"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"get",
+				"getUnfilteredStats"
+			],
+			[
+				"query",
+				"queryParameters"
+			],
+			[
+				"request",
+				"requestOptions"
+			],
+			[
+				"searh",
+				"searchResults"
+			],
+			[
+				"requ",
+				"requestOptions"
+			],
+			[
+				"sear",
+				"searchService"
+			],
+			[
+				"un",
+				"unreviewed"
+			],
+			[
+				"acti",
+				"activeTab"
+			],
+			[
+				"refres",
+				"refreshTab"
+			],
+			[
+				"A",
+				"ApiSearch"
+			],
+			[
+				"$state",
+				"$stateParams"
+			],
+			[
+				"unre",
+				"unreviewedStatuses"
+			],
+			[
+				"match",
+				"matchingValue"
+			],
+			[
+				"called",
+				"calledOnce"
+			],
+			[
+				"before",
+				"beforeEach"
+			],
+			[
+				"bef",
+				"beforeEach"
+			],
+			[
+				"proe",
+				"processingResults"
+			],
+			[
+				"id",
+				"ad_id"
+			],
+			[
+				"incom",
+				"incomingAd"
+			],
+			[
+				"incomingAd",
+				"processIncomingAd"
+			],
+			[
+				"queues",
+				"queuesForSubscription"
+			],
+			[
+				"ready",
+				"readyForFiltering"
+			],
+			[
+				"contains",
+				"containsRefuse"
+			],
+			[
+				"getRandom",
+				"getRandomInt"
+			],
+			[
+				"getRa",
+				"getRandomInt"
+			],
+			[
+				"getra",
+				"getRandomInt"
+			],
+			[
+				"head",
+				"headerName"
+			],
+			[
+				"Deci",
+				"DecisionSet"
+			],
+			[
+				"edit",
+				"editNoticeBySite"
+			],
+			[
+				"create",
+				"createFieldFilterBySite"
+			],
+			[
+				"noti",
+				"noticesBySite"
+			],
+			[
+				"field",
+				"fieldFiltersBySite"
+			],
+			[
+				"strin",
+				"stringify"
+			],
+			[
+				"deci",
+				"decisionName"
+			],
+			[
+				"httpC",
+				"httpClientModule"
+			],
+			[
+				"dei",
+				"decisionName"
+			],
+			[
+				"serv",
+				"services"
+			],
+			[
+				"au",
+				"authorization"
+			],
+			[
+				"interna",
+				"internalApi"
+			],
+			[
+				"be",
+				"before"
+			],
+			[
+				"rea",
+				"readyForFiltering"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"site_spe",
+				"site_specific_roles"
+			],
+			[
+				"site",
+				"site_specific_roles"
+			],
+			[
+				"fie",
+				"fieldName"
+			],
+			[
+				"fiel",
+				"fieldNameFilter"
+			],
+			[
+				"last_mod",
+				"last_modified_by"
+			],
+			[
+				"current",
+				"currentFilter"
+			],
+			[
+				"l",
+				"lastModifiedBy"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"api",
+				"api_host"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/lib/utils/authentication.js",
+			"settings":
+			{
+				"buffer_size": 2636,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/instrument.js",
+			"settings":
+			{
+				"buffer_size": 7142,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/profileDetails.js",
+			"settings":
+			{
+				"buffer_size": 2564,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/docker-compose.yml",
+			"settings":
+			{
+				"buffer_size": 328,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/swarmstack.yml",
+			"settings":
+			{
+				"buffer_size": 348,
+				"line_ending": "Unix",
+				"name": "api:"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control\n---------------\n\n  Version 3.2 Release Notes\n  \n  This version of Package Control focuses on bug-fixes, with notable changes\n  including:\n  \n   - OS X TLS trust roots are exported using APIs to prevent the error message\n     displayed to some El Capitan users\n  \n   - Theme, syntax and color scheme upgrades have been improved and should result\n     in fewer popup messages when filenames change\n  \n   - Various bugs related to installing dependencies have been resolved\n  \n   - Windows and OS X trust roots are exported in a way that valid/invalid purpose\n     information is now communicated to the OpenSSL-based Python ssl module\n  \n   - Further improvements have been made to handling of git/hg package upgrades\n  \n   - The Windows WinINet downloader has improved compatibility with Windows 10\n",
+			"settings":
+			{
+				"buffer_size": 865,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "js/components/session.js",
+			"settings":
+			{
+				"buffer_size": 10947,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/stores/profileStore.js",
+			"settings":
+			{
+				"buffer_size": 615,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/instruments.js",
+			"settings":
+			{
+				"buffer_size": 3811,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/login.js",
+			"settings":
+			{
+				"buffer_size": 3385,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/config.js",
+			"settings":
+			{
+				"buffer_size": 425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/database.json",
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/config.json",
+			"settings":
+			{
+				"buffer_size": 94,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/mongo-migrate.js",
+			"settings":
+			{
+				"buffer_size": 3745,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/stores/store.js",
+			"settings":
+			{
+				"buffer_size": 3327,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 5726,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.ios.js",
+			"settings":
+			{
+				"buffer_size": 1366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/profile.js",
+			"settings":
+			{
+				"buffer_size": 1723,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/home.js",
+			"settings":
+			{
+				"buffer_size": 726,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/stores/auth.js",
+			"settings":
+			{
+				"buffer_size": 1128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/components/goals.js",
+			"settings":
+			{
+				"buffer_size": 4453,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "space",
+		"selected_items":
+		[
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"print",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lin",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"git blame",
+				"Git: Blame"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"inden",
+				"Indent XML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"redin",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"josn",
+				"Set Syntax: JSON"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git di",
+				"Git: Diff Current File"
+			],
+			[
+				"file",
+				"FileDiffs: Menu"
+			],
+			[
+				"filed",
+				"FileDiffs: Menu"
+			],
+			[
+				"git dif",
+				"Git: Diff Current File"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"blam",
+				"Git: Blame"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
+			[
+				"PRETTY",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"beaut",
+				"Javascript Beautify"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"Package Control: list",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"jos",
+				"Set Syntax: JSON"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"prety",
+				"Pretty JSON: JSON 2 XML"
+			],
+			[
+				"syntax ",
+				"Set Syntax: JSON"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git blm",
+				"Git: Blame"
+			],
+			[
+				"git bla",
+				"Git: Blame"
+			],
+			[
+				"syntax: json",
+				"Set Syntax: JSON"
+			],
+			[
+				"pertty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"redint",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"json p",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"git",
+				"Git: Blame"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"git: bla",
+				"Git: Blame"
+			],
+			[
+				"json r",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"snippet ",
+				"Snippet: console.log"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"hg",
+				"SublimeHg: Open Menu"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"pr",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"packagere",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"jso",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"indent\t",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/abo/Dropbox/Development/GuitarJournalApp",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/single",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/stores",
+		"/Users/abo/Dropbox/Development/Guitar-Journal-API"
+	],
+	"file_history":
+	[
+		"/Users/abo/Dropbox/Hemarkiv/CN enskild firma/Marknadsföring/Försäljning sep 2016/Mailtext.txt",
+		"/Users/abo/Projects/TSAB/betalproblem/1039700 Stefan Persson.json",
+		"/Users/abo/Projects/TSAB/betalproblem/1039724 Ivan Dau.json",
+		"/Users/abo/Projects/TSAB/betalproblem/1039549 Cahmilla.json",
+		"/Users/abo/Projects/TSAB/betalproblem/1039426 Alex.json",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/profile.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react-native-vector-icons/index.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/actions/actions.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/stores/instrumentStore.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/app.js",
+		"/Users/abo/Dropbox/Development/Guitar-Journal-API/lib/utils/authentication.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/stores/auth.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/stores/sessionStore.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/sessions.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/index.ios.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApiDummy/db.json",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/stores/store.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/goals.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/session.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/goal.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/login.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/iOS/Podfile",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react/lib/ReactMultiChild.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/package.json",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/stores/goalStore.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/settings.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react-native/Libraries/Components/Touchable/Touchable.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/guitarjournal.sublime-project",
+		"/Users/abo/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react-native-vector-icons/Ionicons.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react-native-vector-icons/lib/create-icon-set.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react-native-vector-icons/RNVectorIconsManager/RNVectorIconsManager.m",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/js/components/home.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react/lib/Transaction.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react/lib/ReactUpdates.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/package.json.old",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react/lib/ReactCompositeComponent.js",
+		"/Users/abo/Dropbox/Development/GuitarJournalApp/node_modules/react-native/Libraries/ReactNative/ReactNativeReconcileTransaction.js",
+		"/Users/abo/Projects/ReactStart/node_modules/react-native/Libraries/Utilities/MessageQueue.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/dibs/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/services/ordersService.js",
+		"/Users/abo/Projects/TSAB/api/config.json",
+		"/Users/abo/Projects/TSAB/api/test/unit/routes/orders.js",
+		"/Users/abo/Projects/TSAB/api/.gitignore",
+		"/Users/abo/Projects/TSAB/api/lib/utils/restifyErrors.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/passenger.js",
+		"/Users/abo/Projects/TSAB/api/lib/routes/estimates.js",
+		"/Users/abo/Projects/TSAB/api/lib/services/estimates.js",
+		"/Users/abo/Projects/TSAB/api/apidoc.json",
+		"/Users/abo/Projects/TSAB/api/package.json",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/messages/createOrder.js",
+		"/Users/abo/Projects/TSAB/api/lib/services/userProfileService.js",
+		"/Users/abo/Projects/TSAB/api/lib/routes/userRoutes.js",
+		"/Users/abo/Projects/TSAB/api/Dockerfile",
+		"/Users/abo/Projects/TSAB/api/docker-compose.yml",
+		"/Users/abo/Projects/TSAB/api/lib/models/orderEstimateRequest.js",
+		"/Users/abo/Projects/TSAB/api/lib/routes.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/adapters/ttesAdapter/messenger.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/connector.js",
+		"/Users/abo/Projects/TSAB/api/lib/app.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/services/orders.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/messenger.js",
+		"/Users/abo/Projects/TSAB/api/lib/services/index.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/adapters/ttesAdapter/connector.js",
+		"/Users/abo/Projects/TSAB/api/lib/routes/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/orderEstimate.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/services/userProfile.js",
+		"/Users/abo/Projects/TSAB/api/lib/config.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/userAccount.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/routes/userRoutes.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/messages/userAddAccount.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/services/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/orderRequest.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/routes/estimates.js",
+		"/Users/abo/Projects/TSAB/api/lib/routes/ordersRoutes.js",
+		"/Users/abo/Projects/TSAB/api/lib/utils/orderAuthUtils.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/db/orders.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/messages/calculateTrip.js",
+		"/Users/abo/Projects/TSAB/api/lib/static/dibswindow.html",
+		"/Users/abo/Projects/TSAB/api/lib/plugins/oauth/token.js",
+		"/Users/abo/Projects/TSAB/api/lib/plugins/oauth/createToken.js",
+		"/Users/abo/Google Drive/Taxi Stockholm/Betalningslösningar/NAV integration/NAV user account.txt",
+		"/Users/abo/Projects/TSAB/api/lib/models/userProfileRegisterCard.js",
+		"/Users/abo/Projects/TSAB/api/doc/schemas/userProfileRegisterCard.html",
+		"/Users/abo/Projects/TSAB/api/test/unit/adapters/dibs/index.js",
+		"/Users/abo/Projects/TSAB/api/authlog.dev01.txt",
+		"/Users/abo/Projects/TSAB/api/test/unit/adapters/db/orders.js",
+		"/Users/abo/Projects/TSAB/api/lib/utils/errors.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/routes/account.js",
+		"/Users/abo/Projects/TSAB/api/lib/utils/httpErrorHandler.js",
+		"/Users/abo/Projects/test.html",
+		"/Users/abo/Projects/TSAB/api/lib/models/userProfile.js",
+		"/Users/abo/Projects/TSAB/api/lib/services/creditsafe.js",
+		"/Users/abo/Projects/TSAB/api/lib/services/accountService.js",
+		"/Users/abo/Projects/TSAB/api/lib/utils/userUtils.js",
+		"/Users/abo/Projects/TSAB/api/lib/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/db/users.js",
+		"/Users/abo/Projects/TSAB/api/migrations/20160224092350-ordersTable.js",
+		"/Users/abo/Projects/TSAB/api/migrations/20160126105220-order-tokens-table.js",
+		"/Users/abo/Projects/TSAB/api/migrations/20151009112046-add-tables.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/token.js",
+		"/Users/abo/Projects/TSAB/api/client ids.txt",
+		"/Users/abo/Projects/TSAB/api/lib/plugins/oauth/oauthErrors.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/utils/errors.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/order.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/utils/tesMessageCodes.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/paymentRetry.js",
+		"/Users/abo/Projects/TSAB/api/lib/plugins/oauth/authorize.js",
+		"/Users/abo/Projects/TSAB/api/lib/routes/auth.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/userProfileUpdate.js",
+		"/Users/abo/Projects/TSAB/api/test/integration/payments/registerCard.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/services/account.js",
+		"/Users/abo/Projects/TSAB/api/lib/static/stripewindow.html",
+		"/Users/abo/Projects/TSAB/api/gulpfile.js",
+		"/Users/abo/Projects/TSAB/api/test/integration/oauth/createToken.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/messages/getAccounts.js",
+		"/Users/abo/Projects/TSAB/api/lib/models/location.js",
+		"/Users/abo/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/abo/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/db/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/stripe/index.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/messages/getOrder.js",
+		"/Users/abo/Projects/TSAB/api/lib/utils/schemaValidator.js",
+		"/Users/abo/Projects/TSAB/api/lib/plugins/errorHandler.js",
+		"/Users/abo/Projects/TSAB/api/test/unit/plugins/errorHandler.js",
+		"/Users/abo/Projects/TSAB/api/lib/adapters/ttesAdapter/utils/messageHelper.js",
+		"/Users/abo/Projects/TSAB/api/api.sublime-project"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/abo/Projects/TSAB/api/,-doc/*,-node_modules/*",
+			"/Users/abo/Projects/TSAB/api/,-doc,-node_modules",
+			"/Users/abo/Projects/TSAB/api/",
+			"/Users/abo/Projects/TSAB/api/test",
+			"/Users/abo/Projects/TSAB/api,-node_modules/,-doc/",
+			"/Users/abo/Projects/TSAB/api,-node_modules/",
+			"/Users/abo/Projects/TSAB/api",
+			"/Users/abo/Dropbox/Development/GuitarJournalApp",
+			"/Users/abo/Projects/Besedo/ad-fetcher,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/besedo-external-api,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/ad-fetcher,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/ad-fetcher,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-docs/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/besedo-external-api,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-*.log,-xunit.out",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-*.log",
+			"/Users/abo/Projects/Besedo/eva-#gui,-node_modules/,-bower_components/,-*.log",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-*.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-*.log",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-*.log",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/besedo-external-api,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/besedo-external-api,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test,-*.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test,-.log",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/processor,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-test",
+			"/Users/abo/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services/migrations,-node_modules/,-bower_components/,-test",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-node_modules/,-bower_components/,-test",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-node_modules/,-bower_components/,-test",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-node_modules/,-bower_components/",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-node_modules/",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-node_modules/,*.js",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-node_modules/,*.js",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api,-node_modules/,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor,-node_modules/,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor/node_modules/besedoq/node_modules/node-amqp,-bower_components/*,-dist/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor/node_modules/node-amqp,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor/node_modules/besedoq,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor/besedoq,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/processor,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/besedo-external-api,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/sessitoken,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-bower_components/*,-dist/*,-node_modules/*,*.js",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,-bower_components/*,-dist/*,-node_modules/*",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services/migrations,-bower_components/*,-dist/*,-node_modules/*",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-bower_components/*,-dist/*,-node_modules/*",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,-bower_components/*,-dist/*",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui",
+			"/Users/andersbornholm/Projects/Besedo/eva-gui,*.js",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services,*.js",
+			"/Users/andersbornholm/Projects/Besedo/queuewrapper,*.js",
+			"/Users/andersbornholm/Projects/Besedo/queuewrapper;*.js",
+			"/Users/andersbornholm/Projects/Besedo/queuewrapper",
+			"/Users/andersbornholm/Projects/Besedo/slinky-dog",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-services",
+			"/Users/andersbornholm/Projects/Besedo/apollo-web-service",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles/test",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles/test",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles,*.js",
+			"/Users/andersbornholm/Projects/Besedo/eva2,*.js",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles,*.js",
+			"/Users/andersbornholm/Projects/Besedo/eva2,*.js",
+			"/Users/andersbornholm/Projects/Besedo/queuewrapper,*.js",
+			"/Users/andersbornholm/Projects/Besedo/slinky-dog,*.js",
+			"/Users/andersbornholm/Projects/Besedo/slinky-dig,*.js",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles,*.js",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/queuewrapper",
+			"/Users/andersbornholm/Projects/Besedo/queueWrapper",
+			"/Users/andersbornholm/Projects/Besedo/slinky-dog",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/queuewrapper",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/eva2",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles,-/Users/andersbornholm/Projects/Besedo/the-incredibles/node_modules,-/Users/andersbornholm/Projects/Besedo/the-incredibles/logs",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles,/Users/andersbornholm/Projects/Besedo/the-incredibles/node_modules",
+			"/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"/Users/andersbornholm/Projects/Besedo/slinky-dog",
+			"/Users/andersbornholm/Projects/Besedo/opsworks-cookbooks",
+			"*.js,/Users/andersbornholm/Projects/Besedo/opsworks-cookbooks",
+			"*.js,/Users/andersbornholm/Projects/Besedo/slinky-dog",
+			"*.js,/Users/andersbornholm/Projects/Besedo/queuewrapper",
+			"*.js,/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"*.js,/Users/andersbornholm/Projects/Besedo/slinky-dog",
+			"*.js,/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"*.js,/Users/andersbornholm/Projects/Besedo/slinky-dog",
+			"*.js,/Users/andersbornholm/Projects/Besedo/the-incredibles",
+			"*.js,/Users/andersbornholm/Projects/Besedo/slinky-dog"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\n",
+			"\\n\\n",
+			"\n    ",
+			"()}",
+			"App",
+			"320",
+			"\n    ",
+			"image",
+			"index.ios.js",
+			"service",
+			"meter",
+			"src",
+			"price",
+			"create",
+			"#send",
+			"initialize",
+			"messenger.initialize",
+			"isalive",
+			"status",
+			"estimate",
+			"accounts",
+			"account",
+			"user's",
+			"orders make",
+			".post",
+			"create order",
+			"locations",
+			"date",
+			"estimate",
+			"console.log",
+			"token",
+			"retry",
+			"}];\n",
+			"userProfileRegisterCard",
+			"MAC",
+			"        account.reservationToken = result.return.verifyID;\n        account.reservationTime = new Date();\n        account.reservationAmount = amount;\n",
+			"({});\n",
+			"[0]",
+			"\"",
+			"createFromTtesError",
+			"creates an entry",
+			"global",
+			"adapters/db/order",
+			"orderToken",
+			"accounts",
+			"bearer token",
+			"registerCard",
+			"getAccounts",
+			"passenger.payment.account",
+			"orderRequest.passenger.payment.account",
+			"orderRequest.account",
+			"orderRequest",
+			"\"",
+			"parameters",
+			"172.17.0",
+			"172.17…≈",
+			"172.17",
+			"userUtils",
+			"appisInstalled",
+			"/token",
+			"token",
+			"getUserAccounts",
+			"getAccounts",
+			"checkOrderToken",
+			"schemaValidator",
+			"success",
+			"only",
+			"errorHandler",
+			"{\n",
+			"errorHandler",
+			"fromTtesError",
+			"createTTESError",
+			"createTTes",
+			"error",
+			"notfound",
+			"accountError",
+			"details.code",
+			"erroring",
+			"102",
+			"/locations",
+			"console.log",
+			"console.og",
+			"messagebody",
+			"httperror",
+			"restify.error",
+			"env",
+			"x-order-token",
+			"OrderAlreadyCancelError",
+			"@ apiPermission",
+			"400 ",
+			"business api",
+			"0.0.1",
+			"@apiPerm",
+			"Bearer token",
+			"AccountError",
+			"apiExample",
+			"})\n",
+			"=\"",
+			"reference",
+			"Android_50",
+			"     * @apiHeader X-Client-OS Name and version of the OS running the client application (i.e. \"iOS 9.2\")",
+			"     * @apiHeader X-Client Name and version of client application (i.e. \"Android 5.0\")",
+			"console.log",
+			"require",
+			"id of",
+			"list of orders",
+			"validateAccount",
+			"locations",
+			"account/",
+			"accounts/",
+			"locations",
+			"example",
+			"console.log('size",
+			"console.log('data",
+			"data using message",
+			"sets up the listeners",
+			"#send",
+			"readUINT",
+			"recieve",
+			"0.0.1",
+			"<<<",
+			"trip.",
+			"trip",
+			"Trip",
+			"trip",
+			"orderRequest",
+			".del",
+			"          "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			";",
+			",",
+			"\\n",
+			"640",
+			"'",
+			"@apiPermission",
+			"android_50",
+			"     * @apiHeader X-Client-OS Name and version of the OS running the client application (i.e. \"ios_92\")",
+			"     * @apiHeader X-Client Name and version of client application (i.e. \"Android_50\")",
+			"receive",
+			"@apiVersion 4.0.0",
+			"     * @apiVersion 4.0",
+			";",
+			"'",
+			".info",
+			"",
+			"'",
+			"g' }",
+			"{ src: '",
+			"'},",
+			"        src: '",
+			"      src: '",
+			"    src: '",
+			"        { src:",
+			"schemas/",
+			"schemas",
+			"Domain of the site (example: 'blocket.se')",
+			"(example: 'blocket.se')",
+			"]));\\n",
+			"', ",
+			", '",
+			"\\n  commands.push(db.insert.bind(db, 'site_category', ['site_id', 'category_id', 'name', 'parent_category_id'], [",
+			"'",
+			"",
+			"'",
+			"#### ",
+			"## ",
+			"notices",
+			"notice",
+			"Notice",
+			"notices",
+			"noticesService",
+			"Notice",
+			"notices",
+			"notice",
+			"fieldFilter",
+			"fieldFilters",
+			"fieldFilter",
+			"FieldFilter",
+			"fieldFilters",
+			"fieldFiltersService",
+			".timestamp.getTime()",
+			"timestamp.getTime()",
+			"",
+			"\"false\"",
+			"\"true\"",
+			"\"null\"",
+			",",
+			"",
+			"], [4, ",
+			"'category_id', 'name', ",
+			"0]));\\n",
+			"]));\\n",
+			"]));",
+			"",
+			"]));",
+			"', ",
+			"']));",
+			" '",
+			"'",
+			"    commands.push(db.insert.bind(db, 'site_category', ['site_id', 'category_id', 'parent_category_id'], [",
+			"'id=",
+			"\\n",
+			"&",
+			"\\'",
+			",name=\\'",
+			",name='",
+			"name='",
+			"id=",
+			"responseWithStatus",
+			"3",
+			"ad",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\\"",
+			"\\t",
+			"\\n",
+			",\\n",
+			"ekhanei",
+			"EKHANEI",
+			"ekhanei",
+			"\"",
+			"\\t",
+			"\\n",
+			",\\n",
+			"\"",
+			"\\\"",
+			"\\n",
+			"\",\\n\"",
+			"name: QUEUE_PREFIX + '-",
+			"console.debug(",
+			"www/",
+			"/www/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/lib/utils/authentication.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/components/instrument.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								733,
+								733
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1951,
+										1952
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										505,
+										506
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 46.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/components/profileDetails.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1721,
+								1721
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1728,
+										1729
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1253,
+										1254
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 613.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/docker-compose.yml",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								328,
+								328
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/swarmstack.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								348
+							]
+						],
+						"settings":
+						{
+							"auto_name": "api:",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										347,
+										348
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/single_quote.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										281,
+										282
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								865,
+								865
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"bracket_highlighter.busy": false,
+							"default_dir": "/Users/abo/Dropbox/Development/GuitarJournalApp",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/components/session.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7455,
+								7813
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										7354,
+										7355
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2407.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/stores/profileStore.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/components/instruments.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 967.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "js/components/login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1025,
+								1025
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										385,
+										386
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										278,
+										279
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/database.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": true,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/config.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 94,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": true,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										93,
+										94
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/abo/Dropbox/Development/Guitar-Journal-API/mongo-migrate.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										726,
+										727
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										589,
+										590
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "js/stores/store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								614,
+								614
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1158,
+								1158
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 3.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "index.ios.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								562,
+								562
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "js/components/profile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								742,
+								742
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										619,
+										620
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 346.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "js/components/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "js/stores/auth.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "js/components/goals.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "guitarjournal.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"gitdiff",
+				"node_modules/apidoc/node_modules/markdown-it/node_modules/argparse/node_modules/lodash/internal/baseDifference.js"
+			],
+			[
+				"gul",
+				"gulpfile.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Projects/TSAB/api/lib/routes/webb-bokning.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"setiniti",
+				"setInitialStatus"
+			],
+			[
+				"process",
+				"Process"
+			],
+			[
+				"itemLinks",
+				"itemLinks"
+			],
+			[
+				"itemL",
+				"itemLinks"
+			],
+			[
+				"itemlinks",
+				"itemLinks"
+			],
+			[
+				"approve",
+				"approve"
+			],
+			[
+				"list",
+				"list"
+			],
+			[
+				"getitemh",
+				"getItemsHistory"
+			],
+			[
+				"reindent",
+				"prettyIndent"
+			]
+		],
+		"width": 1088.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 287.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

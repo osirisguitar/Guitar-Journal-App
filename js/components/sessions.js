@@ -94,7 +94,7 @@ class Sessions extends Component {
     return (
       <TouchableHighlight onPress={() => this.openSession(rowData)} underlayColor={appStyles.constants.green}>
         <View style={appStyles.styles.listRow}>
-          <Image style={appStyles.styles.listThumb} source={{ uri: rowData.instrument ? config.fixImageUrl(rowData.instrument.imageUrl) : null }}>
+          <Image style={appStyles.styles.listThumb} onError={(e) => { console.log('Error', e.nativeEvent.error); }} source={{ uri: rowData.instrument ? config.fixImageUrl(rowData.instrument.imageUrl) : null }}>
             <View style={appStyles.styles.listThumbBorder}/>
           </Image>
           <View style={{ flex: 1 }}>          

@@ -15,6 +15,7 @@ import React, {
 
 import appStyles from '../styles/appStyles';
 import config from '../config';
+import Button from './single/button';
 
 let dataSource = new ListView.DataSource({
   rowHasChanged: (row1, row2) => { return row1 !== row2; }
@@ -28,6 +29,7 @@ class Instruments extends Component {
 
     this.renderRow = this.renderRow.bind(this);
     this.openInstrument = this.openInstrument.bind(this);
+    this.newInstrument = this.newInstrument.bind(this);
     this.instrumentsChanged = this.instrumentsChanged.bind(this);
 
     this.state = {
@@ -46,6 +48,14 @@ class Instruments extends Component {
   instrumentsChanged () {
     let loadedInstruments = InstrumentStore.getAll();
     this.setState({ dataSource: dataSource.cloneWithRows(loadedInstruments) });
+  }
+
+  newInstrument () {
+    this.props.navigator.push({
+      title: 'Instrument',
+      component: Instrument,
+      passProps: { instrument: { sessions: 0, sessionDurations: 0 }, editMode: true }
+    });
   }
 
   openInstrument (instrument) {
@@ -98,12 +108,17 @@ class Instruments extends Component {
 
   render () {
     return (
-      <ListView
-        dataSource={this.state.dataSource}
-        renderRow={this.renderRow}
-        onEndReached={this.loadMoreInstruments}
-        contentInset={{bottom: 49}}
-      />
+      <View>
+        <View style={{ marginTop: 15, marginLeft: 20, marginRight: 20, marginBottom: 15 }}>
+          <Button onPress={this.newInstrument} text='NEW INSTRUMENT' backgroundColor={appStyles.constants.greenHighlight} color={'white'} />
+        </View>
+        <ListView
+          dataSource={this.state.dataSource}
+          renderRow={this.renderRow}
+          onEndReached={this.loadMoreInstruments}
+          contentInset={{bottom: 49}}
+        />
+      </View>
     );
   }
 }

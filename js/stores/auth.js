@@ -40,6 +40,7 @@ function loginFaceBook (fbAccessToken) {
       return res.json();
     })
     .then(resJson => {
+      console.log('Auth:', resJson);
       authHeader = 'Bearer ' + resJson.userToken;
       return true;
     });
